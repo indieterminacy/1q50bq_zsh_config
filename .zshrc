@@ -162,10 +162,10 @@ fi
 #
 # Plugin highlights file content based on the filename extension.
 # Did not load or perhaps already loaded
-zplug "plugins/colorize", \
-    # from:oh-my-zsh
-    from:oh-my-zsh, \
-    if:"which pygmentize"
+# zplug "plugins/colorize", \
+#     # from:oh-my-zsh
+#     from:oh-my-zsh, \
+#     if:"which pygmentize"
 ####################
 # zq30y_select
 ####################
@@ -1068,6 +1068,7 @@ zplug "hlissner/zsh-autopair"
 #  ZSH plugin that maps exit status code to human readable string
 # https://github.com/bric3/nice-exit-code
 
+########################
 #  Easy setup of cdr for zsh.
 # https://github.com/willghatch/zsh-cdr
 
@@ -1079,6 +1080,7 @@ zplug "hlissner/zsh-autopair"
 
 #  An oh-my-zsh plugin that helps to use, create and maintain a list of shell locations
 # https://github.com/or17191/going_places
+########################
 
 #  zsh/zle widget to transform grep commands to awk commands
 #https://github.com/joepvd/grep2awk
@@ -1096,6 +1098,7 @@ zplug "hlissner/zsh-autopair"
 # https://github.com/shengyou/codeception-zsh-plugin
 
 
+########################
 #  Drush ZSH Completion. Please follow on drupal.org http://drupal.org/sandbox/webflo/1113394
 # https://github.com/webflo/drush_zsh_completion
 
@@ -1105,6 +1108,7 @@ zplug "hlissner/zsh-autopair"
 #  Grid'5000 plugin for oh-my-zsh
 # https://www.grid5000.fr/mediawiki/index.php/Grid5000:Home
 
+########################
 #  Autocompletion support for your gulp.js tasks (zsh).
 # https://github.com/akoenig/gulp.plugin.zsh
 
@@ -1115,6 +1119,7 @@ zplug "hlissner/zsh-autopair"
 #  git & hg.
 # https://github.com/dotcode/multi-shell-repo-prompt
 
+########################
 #  Zsh plugin which add completion to NVM
 # https://github.com/tomsquest/nvm-completion.zsh
 
@@ -1127,6 +1132,7 @@ zplug "hlissner/zsh-autopair"
 #  Additional completion definitions for Zsh.
 # https://github.com/zsh-users/zsh-completions
 
+########################
 #  Fish-like autosuggestions for zsh
 # https://github.com/zsh-users/zaw
 
@@ -1136,6 +1142,7 @@ zplug "hlissner/zsh-autopair"
 #  Friendly Interactive ZSHell.
 # https://github.com/zsh-users/fizsh
 
+########################
 
 # https://github.com/racket/shell-completion
 
@@ -1324,9 +1331,9 @@ zstyle ':completion:*' squeeze-slashes true
 # Ignore dups removed to prepare for zsh-history-analysis
 # setopt HIST_IGNORE_DUPS
 #https://github.com/bamos/zsh-history-analysis
-HISTSIZE=1000000000
-SAVEHIST=$HISTSIZE
-setopt EXTENDED_HISTORY
+# HISTSIZE=1000000000
+# SAVEHIST=$HISTSIZE
+# setopt EXTENDED_HISTORY
 ####################
 # zq50j_preferred_program
 ####################
@@ -1521,14 +1528,34 @@ function ri() {
     task $id done
 }
 
+# rq read task
+function ru() {
+    local id="$1"
+    task $id info
+}
+
+
+# ridq delete task
+function rid() {
+    local id="$1"
+    task $id delete
+}
+
+# function rd() {
+#     local id="$1"
+#     task $id modify \\
+# }
+
+# irq Identify next
+function rir() {
+    # local id="$1"
+    task next
+}
 
 alias rrr='task add +in'
 
-
-
 # export PS1='$(task +in +PENDING count) '$PS1
 #
-
 
 function tickle () {
     deadline=$1
