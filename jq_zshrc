@@ -1515,72 +1515,21 @@ function tt() {
     fi
 }
 
-
-function iq_import_links_soft_home {
-    local dir_root="/home/masterp47"
-    local file_links_soft="links_list"
-    local pathway_file="$dir_root/$file_links_soft"
-    local links_target=cat $pathway_file | awk -F "->" '{print $2}'
-    local links_object=cat $pathway_file | awk -F "->" '{print $1}'
-    echo "ln -s $links_target $links_object"
-}
+# rq Analyse Softlinks
+source ~/60o_Flow_Qiuy/50_Environment/nq_softlinks/10_Activity/rq_analysis/oq_zsh/rq_analyse_softlinks.zsh
 
 # 60o Taskwarrior
-# r create task
-function rr() {
-    local id="$1"
-    task add "$id"
-}
+source ~/60o_Control_Qiuy/10_Activity/rq_tasks/oq_taskwarrior/oq_zsh/rq_control_taskwarrior.zsh
 
-# i complete task
-function ri() {
-    local id="$1"
-    task $id done
-}
-
-# rq read task
-function ru() {
-    local id="$1"
-    task $id info
-}
-
-
-# ridq delete task
-function rid() {
-    local id="$1"
-    task $id delete
-}
-
-# function rd() {
-#     local id="$1"
-#     task $id modify \\
-# }
-
-# irq Identify next
-function rir() {
-    # local id="$1"
-    task next
-}
-
-alias rrr='task add +in'
-
-# export PS1='$(task +in +PENDING count) '$PS1
-#
-
-function tickle () {
-    deadline=$1
-    shift
-    ri +tickle wait:$deadline $@
-}
-
-alias tick=tickle
-alias think='tickle +1d'
-
+###
+# hq Navigate Application
+###
 function hq_navigate_application() {
     local id="$1"
     xdotool search --class $id windowactivate
 }
 
+# hq_navigating
 source ~/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_zsh/hq_navigating_filter_filetype.zsh
 
 # Scripts for searching Vim Qiuy configs
