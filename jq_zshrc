@@ -8,9 +8,8 @@ compinit
 # For Adding Tmuxinator Functionality
 # source ~/.bin/tmuxinator.zsh
 
-
-
-source ~/.zplug/zplug
+# source ~/.zplug/zplug
+source ~/.zplug/init.zsh
 
 if [ -f '~/.fzf.zsh' ]; then
     . "~/.fzf.zsh"
@@ -391,6 +390,7 @@ fi
 zplug "Tarrasch/zsh-bd"
 # Tracks your most used directories, based on `frecency'.
 # Source after compinit to enable completion
+# setopt $_Z_DATA /home/masterp47/60o_Flow_Qiuy/40_Movement/Test/
 zplug "knu/z", use:z.sh, \
     nice:10
 
@@ -1515,6 +1515,16 @@ function tt() {
     fi
 }
 
+
+function iq_import_links_soft_home {
+    local dir_root="/home/masterp47"
+    local file_links_soft="links_list"
+    local pathway_file="$dir_root/$file_links_soft"
+    local links_target=cat $pathway_file | awk -F "->" '{print $2}'
+    local links_object=cat $pathway_file | awk -F "->" '{print $1}'
+    echo "ln -s $links_target $links_object"
+}
+
 # 60o Taskwarrior
 # r create task
 function rr() {
@@ -1566,7 +1576,12 @@ function tickle () {
 alias tick=tickle
 alias think='tickle +1d'
 
+function hq_navigate_application() {
+    local id="$1"
+    xdotool search --class $id windowactivate
+}
 
+source ~/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_zsh/hq_navigating_filter_filetype.zsh
 
 # Scripts for searching Vim Qiuy configs
 if [ -f '/home/masterp47/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh' ]; then
