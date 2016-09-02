@@ -8,14 +8,13 @@ compinit
 # For Adding Tmuxinator Functionality
 # source ~/.bin/tmuxinator.zsh
 
-# source ~/.zplug/zplug
 source ~/.zplug/init.zsh
 
 if [ -f '~/.fzf.zsh' ]; then
     . "~/.fzf.zsh"
 fi
 ####################
-# 60o_Sundry
+# oq Sundry
 ####################
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/pj
 ########################################
@@ -25,7 +24,7 @@ fi
 #  Sane bindings for zsh's vi mode so it behaves more vim like
 #  https://github.com/sharat87/zsh-vim-mode
 ####################
-# zq10r_install
+# rq Install
 ####################
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -35,90 +34,70 @@ if ! zplug check --verbose; then
     fi
 fi
 
+# nq Package Manager
+# oq linux
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/command-not-found
 
-# https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/cpanm/_cpanm
+#####################
+# nq Package Managers
+#####################
+source ~/60o_Tools_Qiuy/50_Environment/nq_package_managers/oq_shell/oq_zsh/oqo_packages/iqi_production/oqo_package_managers.zsh
 
+#####################
 # Deleted file, to rebase
+# ~/60o_Control_Qiuy/10_Activity/rq_
 # if [ -f '~/10_Activity/10r_Initiatives/10r_Installing/60o_Shell_Qiuy/60o_ZSH/50j_Settings/50i_Production/sq50j-settings-install-zsh' ]; then
 #     . '~/10_Activity/10r_Initiatives/10r_Installing/60o_Shell_Qiuy/60o_ZSH/50j_Settings/50i_Production/sq50j-settings-install-zsh'
 #     # break
 # fi
+#####################
 ####################
-# 60o_Python
+# iq State
+# oq Python
 ####################
 #  Virtualfish-alike Python virtualenv wrapper for Zsh
 # https://github.com/aperezdc/virtualz
+
 ####################
-# 60o_Pip
-####################
-#https://github.com/sharat87/pip-app/blob/master/pip-app.sh
-####################
-# 60o_Stack
+# oq Stack
 ####################
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/stack/stack.plugin.zsh
+
 ####################
 # sq10r_loading
 ####################
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/zsh_reload
+source ~/60o_Flow_Qiuy/50_Environment/iq_loading/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_loading.zsh
+
 ####################
-# 60o_SystemMD
+# iq compiling
 ####################
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/systemd
+source ~/60o_Control_Qiuy/50_Environment/iq_compiling/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_compiling.zsh
+
 ####################
-# 60o_Wakeonlan
+# rq control
 ####################
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/wakeonlan
+source ~/60o_Control_Qiuy/10_Activity/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_control.zsh
+
 ####################
-# sq10r_compiling
-####################
-#https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/gas/_gas
-####################
-# 60o_GNU_Assembler
-####################
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/gas
-####################
-# sq10r control
-####################
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/gnu-utils
-zplug "peco/peco", \
-    as:command, \
-    from:gh-r
-# https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/common-aliases/common-aliases.plugin.zsh
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/vi-mode
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/vim-interaction
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/systemadmin
-#
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/debian
-#
-# Not sure what this does
-#https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/compleat/compleat.plugin.zsh
-####################
-# zq10r_analyse
+# rq analyse
 ####################
 # if [ -f '~/10_Activity/10r_Analysis/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-analysis-zsh' ]; then
     # . "~/10_Activity/10r_Analysis/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-analysis-zsh"
     # break
 # fi
 source ~/60o_Understand_Qiuy/10_Activity/rq_analyse/oq_zsh/oqo_plugins/iqi_production/oqo_analysis.zsh
+
 ####################
-# sq10r-events
+# rq events
 ####################
+# oq Taskwarrior
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/taskwarrior
+
 ####################
-# sq10r-control
-####################
-####################
-# 60o_Tmux
-####################
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/tmux
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/tmuxinator
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/tmux-cssh
-####################
-# zq10d_alter
+# dq alter
 ####################
 ####################
-# zq10d_edit
+# dq edit
 ####################
 source ~/60o_Control_Qiuy/10_Activity/dq_editing/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_editing.zsh
 # if [ -f '~/10_Activity/10d_Editing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-editing-zsh' ]; then
@@ -126,7 +105,7 @@ source ~/60o_Control_Qiuy/10_Activity/dq_editing/oq_shell/oq_zsh/oqo_plugins/iqi
 #     # break
 # fi
 ####################
-# zq10d_insert
+# rq insert
 ####################
 # https://github.com/jsks/zsh-plugins/tree/master/znote
 source ~/60o_Control_Qiuy/10_Activity/rq_inserting/oq_zsh/oqo_plugins/iqi_production/oqo_inserting.zsh
@@ -135,7 +114,7 @@ source ~/60o_Control_Qiuy/10_Activity/rq_inserting/oq_zsh/oqo_plugins/iqi_produc
 #     # break
 # fi
 ####################
-# zq10r_completing
+# rq completing
 ####################
 source ~/60o_Control_Qiuy/10_Activity/rq_inserting/rq_completing/oq_shell_qiuy/60o_ZSH/60o_Plugins/50i_Production/oqo_completing.zsh
 # if [ -f '~/10_Activity/10d_Insert/10r_Completing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq10d-completing-zsh' ]; then
@@ -143,182 +122,58 @@ source ~/60o_Control_Qiuy/10_Activity/rq_inserting/rq_completing/oq_shell_qiuy/6
 #     # break
 # fi
 ########################################
-# zq10d_copying
+# iq copying
 ########################################
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/copyfile
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/copydir
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/cp
+source ~/60o_Control_Qiuy/10_Activity/xq_copying/oq_shell/oq_zsh/oqo_plugins/iqi_production/xq_copying.zsh
+
 ########################################
-# zq10x_encoding
+# xq encoding
 ########################################
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/encode64
+source ~/60o_Control_Qiuy/10_Activity/xq_encoding/oq_shell/oq_zsh/oqo_plugins/iqi_production/xq_encoding.zsh
+
 ########################################
-# zq10x_Extract
+# iq Extract
 ########################################
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/extract
+source ~/60o_Flow_Qiuy/20_Content/xq_extracting/oq_shell/oq_zsh/oqo_plugins/iqi_production/
+
 ########################################
 # 20_Content
 ########################################
 
 ########################################
-# 30_Emphasis
+# yq Emphasising
 ########################################
-#
-# Plugin highlights file content based on the filename extension.
-# Did not load or perhaps already loaded
-# zplug "plugins/colorize", \
-#     # from:oh-my-zsh
-#     from:oh-my-zsh, \
-#     if:"which pygmentize"
-####################
-# zq30y_select
-####################
-# filter and select item
-#https://github.com/nakamuray/zsh-filter-select
-####################
-# zq30y_reminders
-####################
-# Remember those aliases you once defined.
-zplug "djui/alias-tips"
-####################
-# zq30y_output
-####################
-#Support for conveniently working with Unicode emoji in Zsh.
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/emoji
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/emotty
-#
-# https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/colored-man-pages
-#
-#  A plugin for the zsh syntax highlighter that turns URLs green if they
-#  respond with a "good" status, and red otherwise. Useful for checking URL
-#  typos.
-# https://github.com/ascii-soup/zsh-url-highlighter
-zplug "ascii-soup/zsh-url-highlighter"
+source ~/60o_Understand_Qiuy/30_Display/yq_emphasis/oq_shell/oq_zsh/oqo_plugins/iqi_production/yq_emphasis.zsh
 
+####################
+# iq Selecting
+####################
+source ~/60o_Control_Qiuy/50_Environment/iq_selecting/oq_shell/oq_zsh/oqo_plugins/iqi_production/iq_select.zsh
+
+####################
+# tq reminders
+####################
+source ~/60o_Doc_Qiuy/50_Environment/tq_reminders/oq_shell/oq_zsh/oqo_plugins/iqi_production/tq_reminders.zsh
+
+####################
+# yq output
+####################
 source ~/60o_Understand_Qiuy/30_Display/yq_output/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_output.zsh
 # if [ -f '~/30_Display/30y_Output/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30y-output-zsh' ]; then
 #     . '~/30_Display/30y_Output/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30y-output-zsh'
 #     # break
 # fi
 ####################
-# zq30v_colors
+# vq colors
 ####################
-# # fancy list-colors originally by nicoulaj
-#https://github.com/hchbaw/list-colors.zsh
-# Not fully working
-# -- >8 --
-# fpath+=~/.zsh
-# autoload -Uz list-colors-init; list-colors-init
-# zstyle -e ':completion:*:default' list-colors list-colors list-colors-aux
-# zplug "hchbaw/list-colors.zsh"
-
 source ~/60o_Understand_Qiuy/30_Display/gq_color/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_colors.zsh
 # if [ -f '~/30_Display/30g_Color/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30g-colors-zsh' ]; then
 #     . '~/30_Display/30g_Color/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30g-colors-zsh'
 #     # break
 # fi
 ####################
-# zq30v_themes
+# vq themes
 ####################
-# Used to be functional to try another
-# zplug "themes/duellj", \
-    # from:oh-my-zsh
-# zplug "arialdomartini/oh-my-git"
-    # from:oh-my-zsh
-# zplug "arialdomartini/oh-my-git-themes", \
-#     use:"oppa-lana-style.zsh-theme"
-
-# Not working yet and no instructions
-# Troubleshoot pmodload not found error
-# zplug "chauncey-garrett/zsh-prompt-garrett"
-
-# Solarized dircolors plugin for zsh
-#https://github.com/joel-porquet/zsh-dircolors-solarized
-# TODO Troubleshoot install
-# zplug "joel-porquet/zsh-dircolors-solarized.git", \
-#     from:gh-r
-
-# zsh prompt based on pure theme by sindresorhus
-# Pleasant theme
-# zplug "inimicus/z4rr3t"
-
-#  Git flavored Zsh
-# zplug "tylerreckart/odin"
-
-# An oh-my-zsh theme based on Powerline Vim & Agnoster theme
-# Needs unicode monofonts
-# zplug "halfo/lambda-mod-zsh-theme"
-#
-# zplug "caiogondim/bullet-train-oh-my-zsh-theme"
-
-# zplug "NicoSantangelo/Alpharized"
-
-# Missing vi_prompt_info function
-# zplug "mdentremont/girazz"
-
-# Structured but needs better colours and duel line setup
-# Shows some images, though uses limited pallett
-# zplug "bhilburn/hackersaurus"
-
-# Buggy from my perspective
-# zplug "itsthatguy/itg.zsh-theme"
-
-# Missing powerline fonts
-# zplug "kegonomics/klendathu"
-
-# Good alrounder but needs tweaking
-# zplug "syndbg/mindful-space-zsh-theme"
-
-#Let's breakdown the left prompt (from left to right):
-# Strong allrounder, which would be good to develop
-zplug "S1cK94/minimal"
-
-# Pretty, minimal and fast ZSH prompt
-# Needs troubleshooting, nice idea
-# zplug "sindresorhus/pure"
-# Needs troubleshooting, nice idea
-# zplug "therealklanni/purity"
-
-# Strong allrounder, which would be good to develop
-# zplug "tweekmonster/nanofish"
-
-# An opinionated git prompt for bash and zsh
-# zplug arialdomartini/oh-my-git
-# Well proportioned, missing colour though
-# zplug "wangyandong-ningxia/ningxia.zsh-theme"
-
-#Pad is a simple, concise and beautiful theme for oh-my-zsh.
-# Well proportioned, missing Base 16 and Base 16 Shell Fix
-# zplug "eproxus/pad.zsh-theme"
-
-# Strong allrounder, which would be good to develop
-# zplug "tonyseek/oh-my-zsh-seeker-theme"
-
-# Strong allrounder, which would be good to develop
-# zplug "k-kinzal/oh-my-zsh-sinon-theme"
-
-# Missing colourscheme
-# zplug "skeiter9/sk9-zsh"
-
-# A dark theme for Atom, Prism, Pygments and Zsh inspired by Skeletor from
-# He-Man and the Masters of the Universe.
-# Nice colourscheme but it is missing - TODO
-# http://ramonmcros.com/skeletor-syntax/
-#https://github.com/ramonmcros/skeletor-syntax
-#
-
-# Color fix for robbyrussell's oh-my-zsh theme to work with Solarized
-# zplug "paddykontschak/Solarizsh"
-
-# iggy is a super happy awesome Powerline-style, Git-aware prezto theme.
-# zplug "eugenk/zsh-prompt-iggy"
-
-
-
-# oh-my-zsh Powerline style Theme
-# zplug "jeremyFreeAgent/oh-my-zsh-powerline-theme"
-
-
 source ~/60o_Understand_Qiuy/30_Display/vq_themes/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_themes.zsh
 # if [ -f '~/30_Display/30v_Themes/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30v-themes-zsh' ]; then
 #     . '~/30_Display/30v_Themes/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30v-themes-zsh'
@@ -328,95 +183,34 @@ source ~/60o_Understand_Qiuy/30_Display/vq_themes/oq_shell/oq_zsh/oqo_plugins/iq
 # 40_Movement
 ########################################
 ####################
-# zq40u_orientation
+# uq orientation
 ####################
-# zsh EasyMotion/ace-jump-mode
-# TODO: Build bindings
-zplug "hchbaw/zce.zsh"
-() {
-  setopt localoptions braceccl
-  zstyle ':zce:*' keys ${(j..)$(print {a-z})}
-}
-zstyle ':zce:*' fg 'fg=white,bold'
-zstyle ':zce:*' bg 'fg=7'
-zstyle ':zce:*' prompt-char '%{\e[1;32m%}Character:%{\e[0m%} '
-zstyle ':zce:*' prompt-key '%{\e[1;32m%}Key:%{\e[0m%} '
-
-bindkey "^Xz" zce
-
-# https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/dircycle/dircycle.plugin.zsh
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/dirhistory
-
-# Seems to be empty
-if [ -f '~/40_Movement/40u_Orientating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-orientation-zsh' ]; then
-    . '~/40_Movement/40u_Orientating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-orientation-zsh'
-    # break
-fi
+source ~/60o_Flow_Qiuy/40_Movement/uq_orientating/oq_shell/oq_zsh/oqo_plugins/iqi_production/uq_orientation.zsh
+# if [ -f '~/40_Movement/40u_Orientating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-orientation-zsh' ]; then
+#     . '~/40_Movement/40u_Orientating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-orientation-zsh'
+#     # break
+# fi
 
 ####################
-# zq40u_notifications
+# uq notifications
 ####################
-# Desktop notifications for long-running commands in zsh.
-#https://github.com/marzocchi/zsh-notify
-####################
-# zq40u_history
-####################
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/history
-#
-# Save dirstack history to .zdirs
-# adapted from:
-# github.com/grml/grml-etc-core/blob/master/etc/zsh/zshrc#L1547
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/dirpersist
-#
-#
-#
-# Zsh plugin giving you a history which is sensitive to the directory you are
-# currently in
-# Not sure if functional
-# zplug "tymm/zsh-directory-history"
-#  # Bind up/down arrow keys to navigate through your history
-#  bindkey '\e[A' directory-history-search-backward
-#  bindkey '\e[B' directory-history-search-forward
-#
-#  # Bind CTRL+k and CTRL+j to substring search
-#  bindkey '^j' history-substring-search-up
-#  bindkey '^k' history-substring-search-down
-#
+source ~/60o_Flow_Qiuy/50_Environment/tq_notifications/oq_shell/oq_zsh/oqo_plugins/iqi_production/tq_notifications.zsh
 
-# Per directory history for zsh, as well as global history, and the ability to
-# toggle between them with ^G.
-# Not sure if functional
-# zplug "jimhester/per-directory-history"
 ####################
-# zq40h_navigation
+# tq history
 ####################
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/zsh-navigation-tools
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/wd
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/last-working-dir
-#
-#  Jump back to a specific directory, without doing `cd ../../..`
-zplug "Tarrasch/zsh-bd"
-# Tracks your most used directories, based on `frecency'.
-# Source after compinit to enable completion
-# setopt $_Z_DATA /home/masterp47/60o_Flow_Qiuy/40_Movement/Test/
-zplug "knu/z", use:z.sh, \
-    nice:10
+source ~/60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production/
 
-# #zsh automatic complete-word and list-choices. Originally incr-0.2.zsh by
-# y.fujii <y-fujii at mimosa-pudica.net>
-#https://github.com/hchbaw/auto-fu.zsh
-# a specific branch/tag/commit of a plugin
-# zplug "b4b4r07/enhancd", use:enhancd.sh
-# zplug "b4b4r07/enhancd", \
-#     use:enhancd.sh
-
+####################
+# hq navigation
+####################
 source ~/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_navigation.zsh
 # if [ -f '~/40_Movement/40h_Navigating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40h-navigation-zsh' ]; then
 #     . "~/40_Movement/40h_Navigating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40h-navigation-zsh"
 #     # break
 # fi
 ####################
-# zq40h_searching
+# uq searching
 ####################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/web-search
 # Grab binaries from GitHub Releases
@@ -432,7 +226,7 @@ source ~/60o_Flow_Qiuy/40_Movement/uq_searching/oq_shell/oq_zsh/oqo_plugins/iqi_
 #     # break
 # fi
 ####################
-# zq50b_transferring
+# bq transferring
 ####################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/rsync
 #https://github.com/jsks/zsh-plugins/tree/master/zerve
@@ -440,27 +234,27 @@ source ~/60o_Flow_Qiuy/40_Movement/uq_searching/oq_shell/oq_zsh/oqo_plugins/iqi_
 #http://zshwiki.org/home/code/scripts/zshttpd
 #https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/iwhois/iwhois.plugin.zsh
 ####################
-# 60o_SSH
+# oq SSH
 ####################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/ssh-agent
 ####################
-# 60o_Fabric
+# oq Fabric
 ####################
 # Fabric autocompletion for ZSH
 #https://github.com/vhbit/fabric-zsh-autocomplete
 ####################
-# zq40b_downloading
+# bq downloading
 ####################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/httpie
 ####################
-# zq40b_sourcing
+# bq sourcing
 ####################
 # Can manage local plugins
 # zplug "~/.zsh", from:local
 # ZSH plugin to load some tools.
 #https://github.com/unixorn/jpb.zshplugin
 ####################
-# zq40b_hooks
+# bq hooks
 ####################
 # preexec and precmd functions for Bash just like Zsh.
 # Useful for knowing Zsh functionality
@@ -485,10 +279,10 @@ source ~/60o_Doc_Qiuy/50_Environment/oq_shell/oq_zsh/oqo_plugins/iqi_production/
 ####################
 # https://github.com/alfredodeza/zsh-plugins
 ####################
-# 60o_Python
+# oq Python
 ####################
 ####################
-# 60o_PyLint
+# oq PyLint
 ####################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/pylint
 ####################
@@ -497,7 +291,7 @@ source ~/60o_Doc_Qiuy/50_Environment/oq_shell/oq_zsh/oqo_plugins/iqi_production/
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/virtualenvwrapper
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/virtualenv
 ####################
-# 60o Composer
+# oq Composer
 ####################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/composer
 ####################
@@ -520,7 +314,7 @@ source ~/60o_Doc_Qiuy/60_System/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_s
 # sq60k-databases
 ####################
 ####################
-# 60o_PostgreSQL
+# oq PostgreSQL
 ####################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/postgres
 ####################
@@ -565,35 +359,35 @@ source ~/60o_Doc_Qiuy/60_System/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_s
 #to pull request !
 #https://github.com/srijanshetty/docker-zsh
 ####################
-# 60o_Zeus
+# oq Zeus
 ####################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/zeus
 ####################
-# 60o_Go
+# oq Go
 ####################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/golang
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/go
 ####################
-# 60o_Ruby
+# oq Ruby
 ####################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/gem
 ####################
-# 60o_Gulp
+# oq Gulp
 ####################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/gulp
 ####################
-# 60o_Grunt
+# oq Grunt
 ####################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/grunt
 
 ####################
-#  60o_Lua
+# oq Lua
 ####################
 #  Virtualfish-alike Lua+LuaRocks “Rockenv” wrapper for Zsh
 # https://github.com/aperezdc/rockz
 
 ####################
-# 60o_PHP
+# oq PHP
 ###################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/yii
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/yii2
@@ -603,11 +397,11 @@ source ~/60o_Doc_Qiuy/60_System/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_s
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/laravel5
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/phing
 ####################
-# 60o_Perl
+# oq Perl
 ####################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/perl
 ####################
-# 60o_Python
+# oq Python
 ####################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/python
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/pip
@@ -675,7 +469,7 @@ zplug "b4b4r07/79ee61f7c140c63d2786", \
 # zplug "b4b4r07/emoji-cli", \
 #     on:"stedolan/jq"
 ########################################
-# 60o Git
+# oq Git
 ########################################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/git-extras
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/git-flow-avh
@@ -1014,7 +808,7 @@ zplug "hlissner/zsh-autopair"
 # My Zsh plugin for Maven
 #https://github.com/lesaint/lesaint-mvn
 #############################
-# 60o_Node
+# oq Node
 #############################
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/node
 # https://github.com/poying/zsh-nodejs-plugin
@@ -1039,7 +833,7 @@ zplug "hlissner/zsh-autopair"
 #  ZSH plugin to open Travis CI page for the current repo
 # https://github.com/denolfe/zsh-travis
 #####################
-# 60o Tmux
+# oq Tmux
 #####################
 #  Simple plugin for using tmux with zsh and SSH
 # https://github.com/TBSliver/zsh-plugin-tmux-simple
@@ -1131,7 +925,7 @@ zplug "hlissner/zsh-autopair"
 #  Autocompletion for your gulp.js tasks in the Z-Shell (zsh).
 # https://github.com/srijanshetty/gulp-autocompletion-zsh
 
-#  A shell script to make your prompt pretty and useful. Works with bash & zsh, 
+#  A shell script to make your prompt pretty and useful. Works with bash & zsh,
 #  git & hg.
 # https://github.com/dotcode/multi-shell-repo-prompt
 
@@ -1177,7 +971,7 @@ zplug "hlissner/zsh-autopair"
 # 50n Access
 ########################################
 ########################################
-# 60o_GPG_Agent
+# oq GPG_Agent
 ########################################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/gpg-agent
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/pass
@@ -1203,19 +997,19 @@ alias -g C='| wc -l'
 # 20_Content
 ########################################
 ####################
-# zq20t_history
+# tq history
 ####################
 # HISTFILE=~/.histfile
 ########################################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/ember-cli
 ########################################
-# 30_Themes
+# vq Themes
 ########################################
 # For evaluating themes
 autoload -U promptinit
 promptinit
 ########################################
-# 30_Emphasis
+# yq Emphasis
 ########################################
 # alias -g D="DISPLAY=:0.0"
 # alias -g ED="export DISPLAY=:0.0"
@@ -1240,7 +1034,7 @@ alias -g LS='| less -S'
 # 40_Movement
 ########################################
 ####################
-# zq40u_orientation
+# uq orientation
 ####################
 # cd will never select the parent directory (e.g.: cd ../<TAB>):
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
@@ -1253,12 +1047,12 @@ bindkey '^S' history-incremental-search-forward
 bindkey '^P' history-search-backward
 bindkey '^N' history-search-forward
 ####################
-# zq40h_completion
+# rq completion
 ####################
 # Ignore completion functions for commands you don’t have:
 zstyle ':completion:*:functions' ignored-patterns '_*'
 ####################
-# zq40h_searching
+# uq searching
 ####################
 alias -g EG='|& egrep'
 alias -g G='| egrep'
@@ -1267,7 +1061,7 @@ zstyle ':completion:*' completer _complete _match _approximate
 zstyle ':completion:*:match:*' original only
 zstyle ':completion:*:approximate:*' max-errors 1 numeric
 ####################
-# zq40h_navigation
+# hq navigation
 ####################
 # Another method for quick change directories.
 # Add this to your ~/.zshrc, then just enter “cd …./dir”
@@ -1311,7 +1105,7 @@ alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 ####################
-# zq40b_source
+# bq source
 ####################
 # Source zplug plugins and add commands to $PATH
 zplug load --verbose
@@ -1327,21 +1121,21 @@ alias help=run-help
 # 50_Environment
 ########################################
 ####################
-# zq50i_jobs
+# iq jobs
 ####################
 #A ZSH plugin that allows you to foreground the last backgrounded job (when you
 #would normally do fg) using Ctrl+Z. So in your terminal, you hit Ctrl+Z to
 #background a job, then Ctrl+Z again to foreground it.
 #https://github.com/theunraveler/zsh-fancy_ctrl_z
 ####################
-# zq50i_context
+# iq context
 ####################
 # If you end up using a directory as argument, this will remove the trailing
 # slash (usefull in ln)
 
 zstyle ':completion:*' squeeze-slashes true
 ####################
-# zq20t_history
+# tq history
 ####################
 # Preventing duplicate lines in the history
 # Ignore dups removed to prepare for zsh-history-analysis
@@ -1363,7 +1157,7 @@ alias -s zshrc=vim
 # zq10r_editor
 ####################
 ####################
-# 60o_Vim
+# oq Vim
 ####################
 export EDITOR="vim"
 ########################################
@@ -1496,7 +1290,7 @@ function fzf_tmux_dir() {
 
 function vqr() {
     local pathway
-    pathway="/home/masterp47/10_Activity/10r_Initiatives/10x_Concatenating/60o_Shell_Qiuy/"
+    pathway="~/10_Activity/10r_Initiatives/10x_Concatenating/60o_Shell_Qiuy/"
     # local activation
     # activation="./"
     local mappings
@@ -1522,7 +1316,7 @@ alias n=note_
 
 
 function tt() {
-    projects=$(~/10_Activity/10r_Initiatives/10r_Tasks/60o_Shell_Qiuy/projects_without_next_action.sh)
+    projects=$(~/10_Activity/10r_Initiatives/10r_Tasks/oq Shell_Qiuy/projects_without_next_action.sh)
     if [ "$projects" != "" ]
     then
       print_colored_text RED "Attention: The following projects don't currently have a next action:\n"
@@ -1534,7 +1328,7 @@ function tt() {
 # rq Analyse Softlinks
 source ~/60o_Flow_Qiuy/50_Environment/nq_softlinks/10_Activity/rq_analysis/oq_zsh/rq_analyse_softlinks.zsh
 
-# 60o Taskwarrior
+# oq Taskwarrior
 source ~/60o_Control_Qiuy/10_Activity/rq_tasks/oq_taskwarrior/oq_zsh/rq_control_taskwarrior.zsh
 
 ###
@@ -1549,8 +1343,8 @@ function hq_navigate_application() {
 source ~/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_zsh/hq_navigating_filter_filetype.zsh
 
 # Scripts for searching Vim Qiuy configs
-if [ -f '/home/masterp47/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh' ]; then
-    . "/home/masterp47/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh"
+if [ -f '~/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh' ]; then
+    . "~/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh"
 fi
 # Set priority to load command like a nice command
 # zsh syntax highlighting with dircolors in realtime e.g.,
