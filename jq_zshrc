@@ -88,10 +88,29 @@ source ~/60o_Control_Qiuy/10_Activity/oq_shell/oq_zsh/oqo_plugins/iqi_production
 source ~/60o_Understand_Qiuy/10_Activity/rq_analyse/oq_zsh/oqo_plugins/iqi_production/oqo_analysis.zsh
 
 ####################
-# rq events
+# rq Tasks
+####################
+function tt() {
+    projects=$(~/10_Activity/10r_Initiatives/10r_Tasks/oq Shell_Qiuy/projects_without_next_action.sh)
+    if [ "$projects" != "" ]
+    then
+      print_colored_text RED "Attention: The following projects don't currently have a next action:\n"
+      echo $projects
+      echo
+    fi
+}
 ####################
 # oq Taskwarrior
+####################
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/taskwarrior
+
+# oqo Qiuy Scripts
+source ~/60o_Control_Qiuy/10_Activity/rq_tasks/oq_taskwarrior/oq_zsh/rq_control_taskwarrior.zsh
+
+###################
+# tq Notes
+###################
+source ~/60o_Control_Qiuy/20_Content/tq_notes/oq_shell/oq_zsh/oqo_scripts/oq_notes.zsh
 
 ####################
 # dq alter
@@ -205,10 +224,21 @@ source ~/60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_
 # hq navigation
 ####################
 source ~/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_navigation.zsh
+# oqo Qiuy Script
+# kq filetype
+# TODO Check
+source ~/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_zsh/hq_navigating_filter_filetype.zsh
 # if [ -f '~/40_Movement/40h_Navigating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40h-navigation-zsh' ]; then
 #     . "~/40_Movement/40h_Navigating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40h-navigation-zsh"
 #     # break
 # fi
+###
+# hq Navigation Application
+###
+function hq_navigate_application() {
+    local id="$1"
+    xdotool search --class $id windowactivate
+}
 ####################
 # uq searching
 ####################
@@ -291,7 +321,7 @@ source ~/60o_Doc_Qiuy/60_System/mq_languages/oq_python/oq_shell/oq_zsh/oqo_plugi
 ###################
 # 60o_Duell
 ####################
-#  The Duell Tool is a command line tool for setting up, building and running 
+#  The Duell Tool is a command line tool for setting up, building and running
 #  applications on any platform.
 #  Oh My ZSH plugin for the duell tool
 # https://github.com/jcxavier/oh-my-zsh-duell
@@ -457,34 +487,6 @@ bindkey '^x^e' anyframe-widget-insert-git-branch
 #####################################
 # hq Navigation
 #####################################
-#  zsh plugin to cd to git repository root directory.
-zplug "mollifier/cd-gitroot"
-autoload -Uz cd-gitroot
-fpath=(~/.zplug/repos/mollifier/cd-gitroot(N-/) $fpath)
-# Usage
-# cd-gitroot [PATH]
-
-#  A ZSH plugin to allow easy named directory creation - shortcuts to any directory you want
-zplug "MikeDacre/cdbk"
-# cdbk -a ejul /Users/me/Work/Project13/Samples/FromEster/July/
-
-#  Easy setup of cdr for zsh.
-zplug "willghatch/zsh-cdr"
-
-#  zsh anything.el-like widget.
-zplug "zsh-users/zaw"
-
-#  ranger-like file navigation for zsh
-#  TODO Investigate how to use
-# zplug "Vifon/deer"
-# autoload -U deer
-# zle -N deer
-# bindkey '\ek' deer
-#
-
-#  Jump to custom directories in zsh
-# https://github.com/mfaerevaag/wd
-#
 # Zsh can be configured to remember the DIRSTACKSIZE last visited folders.
 # This can then be used to cd them very quickly.
 # You need to add some lines to your configuration file:
@@ -869,47 +871,8 @@ zstyle ':completion:*:approximate:*' max-errors 1 numeric
 ####################
 # hq navigation
 ####################
-# Another method for quick change directories.
-# Add this to your ~/.zshrc, then just enter “cd …./dir”
-#
-# rationalise-dot() {
-#   if [[ $LBUFFER = *.. ]]; then
-#     LBUFFER+=/..
-#   else
-#     LBUFFER+=.
-#   fi
-# }
-# zle -N rationalise-dot
-# bindkey . rationalise-dot
-# The first comes back in directory history (Alt+Left), the second let the user
-cdUndoKey() {
-  popd      > /dev/null
-  zle       reset-prompt
-  echo
-  ls
-  echo
-}
-zle -N                 cdParentKey
-bindkey '^[[1;3A'      cdParentKey
+source ~/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_shell/oq_zsh/iq_bindings/iqi_production/hq_navigating.zsh
 
-# go to the parent directory (Alt+Up). They also display the directory content.
-cdParentKey() {
-  pushd .. > /dev/null
-  zle      reset-prompt
-  echo
-  ls
-  echo
-}
-
-zle -N                 cdUndoKey
-bindkey '^[[1;3D'      cdUndoKey
-# move inside a directory in bash you would type cd foo. In zsh you can just
-# type foo if you add this line to your .zshrc:
-setopt AUTO_CD
-# Move through parent folders conveniently
-alias -g ...='../..'
-alias -g ....='../../..'
-alias -g .....='../../../..'
 ####################
 # bq source
 ####################
@@ -969,67 +932,14 @@ export EDITOR="vim"
 ########################################
 # 60_System
 ########################################
-########################################
-########################################
+source ~/60o_Control_Qiuy/60_System/oq_shell/oq_zsh/iq_mappings/iqi_production/iq_system.zsh
 
-bindkey -v
-########################################
-alias -g PIPE='|'
-# alias -g CA="2>&1 | cat -A"
-# alias -g DN=/dev/null
-# alias -g F=' | fmt -'
-alias -g Sk="*~(*.bz2|*.gz|*.tgz|*.zip|*.z)"
-# alias -g MM='| most'
-# alias -g NE="2> /dev/null"
-# alias -g NUL="> /dev/null 2>&1"
-# alias -g R=' > /c/aaa/tee.txt '
-# alias -g VM=/var/log/messages
-# alias -g X0G='| xargs -0 egrep'
-# alias -g X0='| xargs -0'
-# alias -g XG='| xargs egrep'
-# alias -g X='| xargs'
+###############
+# iq history
+###############
+source ~/60o_Flow_Qiuy/50_Environment/uq_searching/iq_history/oq_shell/oq_zsh/iq_bindings/iqi_production/uq_history.zsh
 
-# Some functions, like _apt and _dpkg, are very slow
-# You can use a cache in order to proxy the list of results
-# (like the list of available debian packages) Use a cache:
-# zstyle ':completion:*' use-cache on
-# zstyle ':completion:*' cache-path ~/.zsh/cache
-#
-# Prevent CVS files/directories from being completed:
-# zstyle ':completion:*:(all-|)files' ignored-patterns '(|*/)CVS'
-# zstyle ':completion:*:cd:*' ignored-patterns '(*/)#CVS'
-
-# And if you want the number of errors allowed by _approximate to increase with
-# the length of what you have typed so far:
-zstyle -e ':completion:*:approximate:*' \
-        max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3))numeric)'
-
-# With helper functions like:
-# xdvi() { command xdvi ${*:-*.dvi(om[1])} }
-# you can avoid having to complete at all in many cases, but if you do, you might want to fall into menu selection immediately and to have the words sorted by time:
-
-# zstyle ':completion:*:*:xdvi:*' menu yes select
-# zstyle ':completion:*:*:xdvi:*' file-sort time
-
-# Completing process IDs with menu selection:
-zstyle ':completion:*:*:kill:*' menu yes select
-zstyle ':completion:*:kill:*'   force-list always
-
-# http://grml.org/zsh/zsh-lovers.html
-
-# Persistent rehash
-# Typically, compinit will not automatically find new executables in the $PATH.
-# For example, after you install a new package, the files in /usr/bin would not
-# be immediately or automatically included in the completion. Thus, to have
-# these new exectuables included, one would run:
-zstyle ':completion:*' rehash true
-
-# # End of lines configured by zsh-newuser-install
-# # The following lines were added by compinstall
-# zstyle :compinstall filename '/home/masterp47/.zshrc'
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
-
+###############
 function hq {
 # function 10d-create-or-40h-navigate-folder {
     local msg
@@ -1072,8 +982,6 @@ function uq {
     # | &>~/50_Environment/50n_Pathways/60o_Python/q60oag-$msg
 }
 
-
-
 function fzf_tmux_helper() {
   [ -n "$TMUX_PANE" ] || return
   local cmd=$1
@@ -1094,6 +1002,7 @@ function fzf_tmux_dir() {
      paste -sd" " -' Space
 }
 
+# oq Vim
 function vqr() {
     local pathway
     pathway="~/10_Activity/10r_Initiatives/10x_Concatenating/60o_Shell_Qiuy/"
@@ -1110,48 +1019,17 @@ function vqr() {
     $pathway$activation$plugins
 }
 
-function note_ () {
-  local id="$1"
-  local dir="$HOME/workflow/projects"
-  local file="$dir/$id.org"
 
-  mkdir -p $dir e "$file"
-}
+# Scripts for searching Vim Qiuy configs
+source ~/60o_Flow_Qiuy/40_Movement/uq_searching/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_search_configs_vim_qiuy.zsh
+# if [ -f '~/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh' ]; then
+#     . "~/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh"
+# fi
 
-alias n=note_
-
-
-function tt() {
-    projects=$(~/10_Activity/10r_Initiatives/10r_Tasks/oq Shell_Qiuy/projects_without_next_action.sh)
-    if [ "$projects" != "" ]
-    then
-      print_colored_text RED "Attention: The following projects don't currently have a next action:\n"
-      echo $projects
-      echo
-    fi
-}
 
 # rq Analyse Softlinks
 source ~/60o_Flow_Qiuy/50_Environment/nq_softlinks/10_Activity/rq_analysis/oq_zsh/rq_analyse_softlinks.zsh
 
-# oq Taskwarrior
-source ~/60o_Control_Qiuy/10_Activity/rq_tasks/oq_taskwarrior/oq_zsh/rq_control_taskwarrior.zsh
-
-###
-# hq Navigate Application
-###
-function hq_navigate_application() {
-    local id="$1"
-    xdotool search --class $id windowactivate
-}
-
-# hq_navigating
-source ~/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_zsh/hq_navigating_filter_filetype.zsh
-
-# Scripts for searching Vim Qiuy configs
-if [ -f '~/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh' ]; then
-    . "~/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh"
-fi
 # Set priority to load command like a nice command
 # zsh syntax highlighting with dircolors in realtime e.g.,
 # zsh-syntax-highlighting must be loaded
