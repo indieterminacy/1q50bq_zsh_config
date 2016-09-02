@@ -39,6 +39,7 @@ fi
 
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/cpanm/_cpanm
 
+# Deleted file, to rebase
 # if [ -f '~/10_Activity/10r_Initiatives/10r_Installing/60o_Shell_Qiuy/60o_ZSH/50j_Settings/50i_Production/sq50j-settings-install-zsh' ]; then
 #     . '~/10_Activity/10r_Initiatives/10r_Installing/60o_Shell_Qiuy/60o_ZSH/50j_Settings/50i_Production/sq50j-settings-install-zsh'
 #     # break
@@ -95,10 +96,11 @@ zplug "peco/peco", \
 ####################
 # zq10r_analyse
 ####################
-if [ -f '~/10_Activity/10r_Analysis/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-analysis-zsh' ]; then
-    . "~/10_Activity/10r_Analysis/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-analysis-zsh"
+# if [ -f '~/10_Activity/10r_Analysis/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-analysis-zsh' ]; then
+    # . "~/10_Activity/10r_Analysis/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-analysis-zsh"
     # break
-fi
+# fi
+source ~/60o_Understand_Qiuy/10_Activity/rq_analyse/oq_zsh/oqo_plugins/iqi_production/oqo_analysis.zsh
 ####################
 # sq10r-events
 ####################
@@ -118,25 +120,28 @@ fi
 ####################
 # zq10d_edit
 ####################
-if [ -f '~/10_Activity/10d_Editing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-editing-zsh' ]; then
-    . '~/10_Activity/10d_Editing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-editing-zsh'
-    # break
-fi
+source ~/60o_Control_Qiuy/10_Activity/dq_editing/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_editing.zsh
+# if [ -f '~/10_Activity/10d_Editing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-editing-zsh' ]; then
+#     . '~/10_Activity/10d_Editing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-editing-zsh'
+#     # break
+# fi
 ####################
 # zq10d_insert
 ####################
 # https://github.com/jsks/zsh-plugins/tree/master/znote
-if [ -f '~/10_Activity/10d_Insert/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-inserting-zsh' ]; then
-    . '~/10_Activity/10d_Insert/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-inserting-zsh'
-    # break
-fi
+source ~/60o_Control_Qiuy/10_Activity/rq_inserting/oq_zsh/oqo_plugins/iqi_production/oqo_inserting.zsh
+# if [ -f '~/10_Activity/10d_Insert/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-inserting-zsh' ]; then
+#     . '~/10_Activity/10d_Insert/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-inserting-zsh'
+#     # break
+# fi
 ####################
 # zq10r_completing
 ####################
-if [ -f '~/10_Activity/10d_Insert/10r_Completing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq10d-completing-zsh' ]; then
-    . '~/10_Activity/10d_Insert/10r_Completing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq10d-completing-zsh'
-    # break
-fi
+source ~/60o_Control_Qiuy/10_Activity/rq_inserting/rq_completing/oq_shell_qiuy/60o_ZSH/60o_Plugins/50i_Production/oqo_completing.zsh
+# if [ -f '~/10_Activity/10d_Insert/10r_Completing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq10d-completing-zsh' ]; then
+#     . '~/10_Activity/10d_Insert/10r_Completing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq10d-completing-zsh'
+#     # break
+# fi
 ########################################
 # zq10d_copying
 ########################################
@@ -190,10 +195,11 @@ zplug "djui/alias-tips"
 # https://github.com/ascii-soup/zsh-url-highlighter
 zplug "ascii-soup/zsh-url-highlighter"
 
-if [ -f '~/30_Display/30y_Output/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30y-output-zsh' ]; then
-    . '~/30_Display/30y_Output/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30y-output-zsh'
-    # break
-fi
+source ~/60o_Understand_Qiuy/30_Display/yq_output/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_output.zsh
+# if [ -f '~/30_Display/30y_Output/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30y-output-zsh' ]; then
+#     . '~/30_Display/30y_Output/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30y-output-zsh'
+#     # break
+# fi
 ####################
 # zq30v_colors
 ####################
@@ -206,10 +212,11 @@ fi
 # zstyle -e ':completion:*:default' list-colors list-colors list-colors-aux
 # zplug "hchbaw/list-colors.zsh"
 
-if [ -f '~/30_Display/30g_Color/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30g-colors-zsh' ]; then
-    . '~/30_Display/30g_Color/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30g-colors-zsh'
-    # break
-fi
+source ~/60o_Understand_Qiuy/30_Display/gq_color/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_colors.zsh
+# if [ -f '~/30_Display/30g_Color/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30g-colors-zsh' ]; then
+#     . '~/30_Display/30g_Color/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30g-colors-zsh'
+#     # break
+# fi
 ####################
 # zq30v_themes
 ####################
@@ -312,10 +319,11 @@ zplug "S1cK94/minimal"
 # zplug "jeremyFreeAgent/oh-my-zsh-powerline-theme"
 
 
-if [ -f '~/30_Display/30v_Themes/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30v-themes-zsh' ]; then
-    . '~/30_Display/30v_Themes/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30v-themes-zsh'
-    # break
-fi
+source ~/60o_Understand_Qiuy/30_Display/vq_themes/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_themes.zsh
+# if [ -f '~/30_Display/30v_Themes/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30v-themes-zsh' ]; then
+#     . '~/30_Display/30v_Themes/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30v-themes-zsh'
+#     # break
+# fi
 ########################################
 # 40_Movement
 ########################################
@@ -402,10 +410,11 @@ zplug "knu/z", use:z.sh, \
 # zplug "b4b4r07/enhancd", \
 #     use:enhancd.sh
 
-if [ -f '~/40_Movement/40h_Navigating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40h-navigation-zsh' ]; then
-    . "~/40_Movement/40h_Navigating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40h-navigation-zsh"
-    # break
-fi
+source ~/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_navigation.zsh
+# if [ -f '~/40_Movement/40h_Navigating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40h-navigation-zsh' ]; then
+#     . "~/40_Movement/40h_Navigating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40h-navigation-zsh"
+#     # break
+# fi
 ####################
 # zq40h_searching
 ####################
