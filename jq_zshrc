@@ -424,10 +424,13 @@ source ~/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_shell/oq_zsh/oqo_plugins/iqi
 #
 #Searches for your frontend web development made easier
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/frontend-search
-if [ -f '~/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-zsh' ]; then
-    . '~/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-zsh'
-    # break
-fi
+
+# Identify other file in folder
+source ~/60o_Flow_Qiuy/40_Movement/uq_searching/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_search_configs_vim_qiuy.zsh
+# if [ -f '~/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-zsh' ]; then
+#     . '~/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-zsh'
+#     # break
+# fi
 ####################
 # zq50b_transferring
 ####################
@@ -470,10 +473,11 @@ fi
 zplug "Peeja/ctrl-zsh"
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/fancy-ctrl-z
 
-if [ -f '~/50_Environment/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq50-environment-zsh' ]; then
-    . '~/50_Environment/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq50-environment-zsh'
-    # break
-fi
+source ~/60o_Doc_Qiuy/50_Environment/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_environment.zsh
+# if [ -f '~/50_Environment/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq50-environment-zsh' ]; then
+#     . '~/50_Environment/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq50-environment-zsh'
+#     # break
+# fi
 
 
 ####################
@@ -507,10 +511,11 @@ fi
 zplug "grml/zsh-lovers"
 
 # Empty file
-if [ -f '~/60_System/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60-system-zsh' ]; then
-    . '~/60_System/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60-system-zsh'
-    # break
-fi
+source ~/60o_Doc_Qiuy/60_System/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_system.zsh
+# if [ -f '~/60_System/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60-system-zsh' ]; then
+#     . '~/60_System/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60-system-zsh'
+#     # break
+# fi
 ####################
 # sq60k-databases
 ####################
@@ -618,10 +623,11 @@ fi
 
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/django
 
-if [ -f '~/60_System/60m_Languages/60o_Python/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-python-zsh' ]; then
-    . '~/60_System/60m_Languages/60o_Python/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-python-zsh'
-    # break
-fi
+source ~/60o_Doc_Qiuy/60_System/mq_languages/oq_python/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_python.zsh
+# if [ -f '~/60_System/60m_Languages/60o_Python/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-python-zsh' ]; then
+#     . '~/60_System/60m_Languages/60o_Python/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-python-zsh'
+#     # break
+# fi
 ########################################
 # A collection of some ZSH scripts
 # zplug "jsks/zsh-plugins"
@@ -764,10 +770,11 @@ zplug "Seinh/git-prune"
 #  Git ZShell Prompt
 # https://github.com/matthewmccullough/Git-ZShell-Prompt
 
-if [ -f '~/50_Environment/10r_Control/60o_Git/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-git-zsh' ]; then
-    . "~/50_Environment/10r_Control/60o_Git/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-git-zsh"
-    # break
-fi
+source ~/60o_Doc_Qiuy/50_Environment/nq_version_control/oq_git/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_git.zsh
+# if [ -f '~/50_Environment/10r_Control/60o_Git/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-git-zsh' ]; then
+#     . "~/50_Environment/10r_Control/60o_Git/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-git-zsh"
+#     # break
+# fi
 ########################################
 # This repo contains some useful plugins for oh-my-zsh.
 # Including nginx, lesscss, memcached
