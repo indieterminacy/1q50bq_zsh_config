@@ -6,12 +6,12 @@ compinit
 # End of lines added by compinstall
 #
 # For Adding Tmuxinator Functionality
-# source ~/.bin/tmuxinator.zsh
+# source $HOME/.bin/tmuxinator.zsh
 
-source ~/.zplug/init.zsh
+source $HOME/.zplug/init.zsh
 
-if [ -f '~/.fzf.zsh' ]; then
-    . "~/.fzf.zsh"
+if [ -f '$HOME/.fzf.zsh' ]; then
+    . "$HOME/.fzf.zsh"
 fi
 ####################
 # oq Sundry
@@ -41,13 +41,13 @@ fi
 #####################
 # nq Package Managers
 #####################
-source ~/60o_Tools_Qiuy/50_Environment/nq_package_managers/oq_shell/oq_zsh/oqo_packages/iqi_production/oqo_package_managers.zsh
+source $HOME/60o_Tools_Qiuy/50_Environment/nq_package_managers/oq_shell/oq_zsh/oqo_packages/iqi_production/oqo_package_managers.zsh
 
 #####################
 # Deleted file, to rebase
-# ~/60o_Control_Qiuy/10_Activity/rq_
-# if [ -f '~/10_Activity/10r_Initiatives/10r_Installing/60o_Shell_Qiuy/60o_ZSH/50j_Settings/50i_Production/sq50j-settings-install-zsh' ]; then
-#     . '~/10_Activity/10r_Initiatives/10r_Installing/60o_Shell_Qiuy/60o_ZSH/50j_Settings/50i_Production/sq50j-settings-install-zsh'
+# $HOME/60o_Control_Qiuy/10_Activity/rq_
+# if [ -f '$HOME/10_Activity/10r_Initiatives/10r_Installing/60o_Shell_Qiuy/60o_ZSH/50j_Settings/50i_Production/sq50j-settings-install-zsh' ]; then
+#     . '$HOME/10_Activity/10r_Initiatives/10r_Installing/60o_Shell_Qiuy/60o_ZSH/50j_Settings/50i_Production/sq50j-settings-install-zsh'
 #     # break
 # fi
 #####################
@@ -66,32 +66,32 @@ source ~/60o_Tools_Qiuy/50_Environment/nq_package_managers/oq_shell/oq_zsh/oqo_p
 ####################
 # sq10r_loading
 ####################
-source ~/60o_Flow_Qiuy/50_Environment/iq_loading/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_loading.zsh
+source $HOME/60o_Flow_Qiuy/50_Environment/iq_loading/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_loading.zsh
 
 ####################
 # iq compiling
 ####################
-source ~/60o_Control_Qiuy/50_Environment/iq_compiling/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_compiling.zsh
+source $HOME/60o_Control_Qiuy/50_Environment/iq_compiling/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_compiling.zsh
 
 ####################
 # rq control
 ####################
-source ~/60o_Control_Qiuy/10_Activity/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_control.zsh
+source $HOME/60o_Control_Qiuy/10_Activity/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_control.zsh
 
 ####################
 # rq analyse
 ####################
-# if [ -f '~/10_Activity/10r_Analysis/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-analysis-zsh' ]; then
-    # . "~/10_Activity/10r_Analysis/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-analysis-zsh"
+# if [ -f '$HOME/10_Activity/10r_Analysis/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-analysis-zsh' ]; then
+    # . "$HOME/10_Activity/10r_Analysis/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-analysis-zsh"
     # break
 # fi
-source ~/60o_Understand_Qiuy/10_Activity/rq_analyse/oq_zsh/oqo_plugins/iqi_production/oqo_analysis.zsh
+source $HOME/60o_Understand_Qiuy/10_Activity/rq_analyse/oq_zsh/oqo_plugins/iqi_production/oqo_analysis.zsh
 
 ####################
 # rq Tasks
 ####################
 function tt() {
-    projects=$(~/10_Activity/10r_Initiatives/10r_Tasks/oq Shell_Qiuy/projects_without_next_action.sh)
+    projects=$($HOME/10_Activity/10r_Initiatives/10r_Tasks/oq Shell_Qiuy/projects_without_next_action.sh)
     if [ "$projects" != "" ]
     then
       print_colored_text RED "Attention: The following projects don't currently have a next action:\n"
@@ -105,12 +105,12 @@ function tt() {
 # https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/taskwarrior
 
 # oqo Qiuy Scripts
-source ~/60o_Control_Qiuy/10_Activity/rq_tasks/oq_taskwarrior/oq_zsh/rq_control_taskwarrior.zsh
+source $HOME/60o_Control_Qiuy/10_Activity/rq_tasks/oq_taskwarrior/oq_zsh/rq_control_taskwarrior.zsh
 
 ###################
 # tq Notes
 ###################
-source ~/60o_Control_Qiuy/20_Content/tq_notes/oq_shell/oq_zsh/oqo_scripts/oq_notes.zsh
+source $HOME/60o_Control_Qiuy/20_Content/tq_notes/oq_shell/oq_zsh/oqo_scripts/oq_notes.zsh
 
 ####################
 # dq alter
@@ -118,42 +118,42 @@ source ~/60o_Control_Qiuy/20_Content/tq_notes/oq_shell/oq_zsh/oqo_scripts/oq_not
 ####################
 # dq edit
 ####################
-source ~/60o_Control_Qiuy/10_Activity/dq_editing/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_editing.zsh
-# if [ -f '~/10_Activity/10d_Editing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-editing-zsh' ]; then
-#     . '~/10_Activity/10d_Editing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-editing-zsh'
+source $HOME/60o_Control_Qiuy/10_Activity/dq_editing/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_editing.zsh
+# if [ -f '$HOME/10_Activity/10d_Editing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-editing-zsh' ]; then
+#     . '$HOME/10_Activity/10d_Editing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-editing-zsh'
 #     # break
 # fi
 ####################
 # rq insert
 ####################
 # https://github.com/jsks/zsh-plugins/tree/master/znote
-source ~/60o_Control_Qiuy/10_Activity/rq_inserting/oq_zsh/oqo_plugins/iqi_production/oqo_inserting.zsh
-# if [ -f '~/10_Activity/10d_Insert/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-inserting-zsh' ]; then
-#     . '~/10_Activity/10d_Insert/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-inserting-zsh'
+source $HOME/60o_Control_Qiuy/10_Activity/rq_inserting/oq_zsh/oqo_plugins/iqi_production/oqo_inserting.zsh
+# if [ -f '$HOME/10_Activity/10d_Insert/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-inserting-zsh' ]; then
+#     . '$HOME/10_Activity/10d_Insert/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-inserting-zsh'
 #     # break
 # fi
 ####################
 # rq completing
 ####################
-source ~/60o_Control_Qiuy/10_Activity/rq_inserting/rq_completing/oq_shell_qiuy/60o_ZSH/60o_Plugins/50i_Production/oqo_completing.zsh
-# if [ -f '~/10_Activity/10d_Insert/10r_Completing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq10d-completing-zsh' ]; then
-#     . '~/10_Activity/10d_Insert/10r_Completing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq10d-completing-zsh'
+source $HOME/60o_Control_Qiuy/10_Activity/rq_inserting/rq_completing/oq_shell_qiuy/60o_ZSH/60o_Plugins/50i_Production/oqo_completing.zsh
+# if [ -f '$HOME/10_Activity/10d_Insert/10r_Completing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq10d-completing-zsh' ]; then
+#     . '$HOME/10_Activity/10d_Insert/10r_Completing/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq10d-completing-zsh'
 #     # break
 # fi
 ########################################
 # iq copying
 ########################################
-source ~/60o_Control_Qiuy/10_Activity/xq_copying/oq_shell/oq_zsh/oqo_plugins/iqi_production/xq_copying.zsh
+source $HOME/60o_Control_Qiuy/10_Activity/xq_copying/oq_shell/oq_zsh/oqo_plugins/iqi_production/xq_copying.zsh
 
 ########################################
 # xq encoding
 ########################################
-source ~/60o_Control_Qiuy/10_Activity/xq_encoding/oq_shell/oq_zsh/oqo_plugins/iqi_production/xq_encoding.zsh
+source $HOME/60o_Control_Qiuy/10_Activity/xq_encoding/oq_shell/oq_zsh/oqo_plugins/iqi_production/xq_encoding.zsh
 
 ########################################
 # iq Extract
 ########################################
-source ~/60o_Flow_Qiuy/20_Content/xq_extracting/oq_shell/oq_zsh/oqo_plugins/iqi_production/
+source $HOME/60o_Flow_Qiuy/20_Content/xq_extracting/oq_shell/oq_zsh/oqo_plugins/iqi_production/
 
 ########################################
 # 20_Content
@@ -162,40 +162,40 @@ source ~/60o_Flow_Qiuy/20_Content/xq_extracting/oq_shell/oq_zsh/oqo_plugins/iqi_
 ########################################
 # yq Emphasising
 ########################################
-source ~/60o_Understand_Qiuy/30_Display/yq_emphasis/oq_shell/oq_zsh/oqo_plugins/iqi_production/yq_emphasis.zsh
+source $HOME/60o_Understand_Qiuy/30_Display/yq_emphasis/oq_shell/oq_zsh/oqo_plugins/iqi_production/yq_emphasis.zsh
 
 ####################
 # iq Selecting
 ####################
-source ~/60o_Control_Qiuy/50_Environment/iq_selecting/oq_shell/oq_zsh/oqo_plugins/iqi_production/iq_select.zsh
+source $HOME/60o_Control_Qiuy/50_Environment/iq_selecting/oq_shell/oq_zsh/oqo_plugins/iqi_production/iq_select.zsh
 
 ####################
 # tq reminders
 ####################
-source ~/60o_Doc_Qiuy/50_Environment/tq_reminders/oq_shell/oq_zsh/oqo_plugins/iqi_production/tq_reminders.zsh
+source $HOME/60o_Doc_Qiuy/50_Environment/tq_reminders/oq_shell/oq_zsh/oqo_plugins/iqi_production/tq_reminders.zsh
 
 ####################
 # yq output
 ####################
-source ~/60o_Understand_Qiuy/30_Display/yq_output/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_output.zsh
-# if [ -f '~/30_Display/30y_Output/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30y-output-zsh' ]; then
-#     . '~/30_Display/30y_Output/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30y-output-zsh'
+source $HOME/60o_Understand_Qiuy/30_Display/yq_output/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_output.zsh
+# if [ -f '$HOME/30_Display/30y_Output/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30y-output-zsh' ]; then
+#     . '$HOME/30_Display/30y_Output/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30y-output-zsh'
 #     # break
 # fi
 ####################
 # vq colors
 ####################
-source ~/60o_Understand_Qiuy/30_Display/gq_color/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_colors.zsh
-# if [ -f '~/30_Display/30g_Color/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30g-colors-zsh' ]; then
-#     . '~/30_Display/30g_Color/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30g-colors-zsh'
+source $HOME/60o_Understand_Qiuy/30_Display/gq_color/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_colors.zsh
+# if [ -f '$HOME/30_Display/30g_Color/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30g-colors-zsh' ]; then
+#     . '$HOME/30_Display/30g_Color/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30g-colors-zsh'
 #     # break
 # fi
 ####################
 # vq themes
 ####################
-source ~/60o_Understand_Qiuy/30_Display/vq_themes/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_themes.zsh
-# if [ -f '~/30_Display/30v_Themes/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30v-themes-zsh' ]; then
-#     . '~/30_Display/30v_Themes/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30v-themes-zsh'
+source $HOME/60o_Understand_Qiuy/30_Display/vq_themes/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_themes.zsh
+# if [ -f '$HOME/30_Display/30v_Themes/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30v-themes-zsh' ]; then
+#     . '$HOME/30_Display/30v_Themes/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq30v-themes-zsh'
 #     # break
 # fi
 ########################################
@@ -204,32 +204,32 @@ source ~/60o_Understand_Qiuy/30_Display/vq_themes/oq_shell/oq_zsh/oqo_plugins/iq
 ####################
 # uq orientation
 ####################
-source ~/60o_Flow_Qiuy/40_Movement/uq_orientating/oq_shell/oq_zsh/oqo_plugins/iqi_production/uq_orientation.zsh
-# if [ -f '~/40_Movement/40u_Orientating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-orientation-zsh' ]; then
-#     . '~/40_Movement/40u_Orientating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-orientation-zsh'
+source $HOME/60o_Flow_Qiuy/40_Movement/uq_orientating/oq_shell/oq_zsh/oqo_plugins/iqi_production/uq_orientation.zsh
+# if [ -f '$HOME/40_Movement/40u_Orientating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-orientation-zsh' ]; then
+#     . '$HOME/40_Movement/40u_Orientating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-orientation-zsh'
 #     # break
 # fi
 
 ####################
 # uq notifications
 ####################
-source ~/60o_Flow_Qiuy/50_Environment/tq_notifications/oq_shell/oq_zsh/oqo_plugins/iqi_production/tq_notifications.zsh
+source $HOME/60o_Flow_Qiuy/50_Environment/tq_notifications/oq_shell/oq_zsh/oqo_plugins/iqi_production/tq_notifications.zsh
 
 ####################
 # tq history
 ####################
-source ~/60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_history.zsh
+source $HOME/60o_Doc_Qiuy/50_Environment/tq_history/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_history.zsh
 
 ####################
 # hq navigation
 ####################
-source ~/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_navigation.zsh
+source $HOME/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_navigation.zsh
 # oqo Qiuy Script
 # kq filetype
 # TODO Check
-source ~/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_zsh/hq_navigating_filter_filetype.zsh
-# if [ -f '~/40_Movement/40h_Navigating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40h-navigation-zsh' ]; then
-#     . "~/40_Movement/40h_Navigating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40h-navigation-zsh"
+source $HOME/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_zsh/hq_navigating_filter_filetype.zsh
+# if [ -f '$HOME/40_Movement/40h_Navigating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40h-navigation-zsh' ]; then
+#     . "$HOME/40_Movement/40h_Navigating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40h-navigation-zsh"
 #     # break
 # fi
 ###
@@ -243,40 +243,40 @@ function hq_navigate_application() {
 # uq searching
 ####################
 # Identify other file in folder
-source ~/60o_Flow_Qiuy/40_Movement/uq_searching/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_search.zsh
-source ~/60o_Flow_Qiuy/40_Movement/uq_searching/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_search_configs_vim_qiuy.zsh
-# if [ -f '~/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-zsh' ]; then
-#     . '~/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-zsh'
+source $HOME/60o_Flow_Qiuy/40_Movement/uq_searching/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_search.zsh
+source $HOME/60o_Flow_Qiuy/40_Movement/uq_searching/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_search_configs_vim_qiuy.zsh
+# if [ -f '$HOME/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-zsh' ]; then
+#     . '$HOME/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-zsh'
 #     # break
 # fi
 ####################
 # bq transferring
 ####################
-source ~/60o_Flow_Qiuy/40_Movement/bq_transferring/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_transferring.zsh
+source $HOME/60o_Flow_Qiuy/40_Movement/bq_transferring/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_transferring.zsh
 
 ####################
 # bq sourcing
 ####################
-source ~/60o_Control_Qiuy/50_Environment/iq_sourcing/oq_shell/oq_zsh/oqo_plugins/iqi_production/
+source $HOME/60o_Control_Qiuy/50_Environment/iq_sourcing/oq_shell/oq_zsh/oqo_plugins/iqi_production/
 
 ####################
 # bq hooks
 ####################
-source ~/60o_Flow_Qiuy/50_Environment/bq_hooks/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_hooks.zsh
+source $HOME/60o_Flow_Qiuy/50_Environment/bq_hooks/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_hooks.zsh
 
 ########################################
 # 50_Environment
 ########################################
-source ~/60o_Doc_Qiuy/50_Environment/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_environment.zsh
-# if [ -f '~/50_Environment/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq50-environment-zsh' ]; then
-#     . '~/50_Environment/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq50-environment-zsh'
+source $HOME/60o_Doc_Qiuy/50_Environment/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_environment.zsh
+# if [ -f '$HOME/50_Environment/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq50-environment-zsh' ]; then
+#     . '$HOME/50_Environment/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq50-environment-zsh'
 #     # break
 # fi
 
 ####################
 # iq testing
 ####################
-source ~/60o_Control_Qiuy/50_Environment/nq_testing/oq_shell/oq_zsh/oqo_plugins/iqi_production/nq_testing.zsh
+source $HOME/60o_Control_Qiuy/50_Environment/nq_testing/oq_shell/oq_zsh/oqo_plugins/iqi_production/nq_testing.zsh
 
 ####################
 # iq contexts
@@ -287,34 +287,34 @@ source ~/60o_Control_Qiuy/50_Environment/nq_testing/oq_shell/oq_zsh/oqo_plugins/
 ####################
 # iq permissions
 ####################
-source ~/60o_Control_Qiuy/50_Environment/iq_access/iq_permissions/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_permissions.zsh
+source $HOME/60o_Control_Qiuy/50_Environment/iq_access/iq_permissions/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_permissions.zsh
 
 ########################################
 # 60_System
 ########################################
-source ~/60o_Doc_Qiuy/60_System/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_system.zsh
-# if [ -f '~/60_System/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60-system-zsh' ]; then
-#     . '~/60_System/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60-system-zsh'
+source $HOME/60o_Doc_Qiuy/60_System/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_system.zsh
+# if [ -f '$HOME/60_System/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60-system-zsh' ]; then
+#     . '$HOME/60_System/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60-system-zsh'
 #     # break
 # fi
 
 ####################
 # sq60k-databases
 ####################
-source ~/60o_Doc_Qiuy/60_System/mq_databases/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_databases.zsh
+source $HOME/60o_Doc_Qiuy/60_System/mq_databases/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_databases.zsh
 
 ####################
 # 60k_Formats
 ####################
-source ~/60o_Doc_Qiuy/60_System/kq_formats/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_formats.zsh
+source $HOME/60o_Doc_Qiuy/60_System/kq_formats/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_formats.zsh
 
 ####################
 # zq60m_languages
 ####################
-source ~/60o_Doc_Qiuy/60_System/mq_languages/oq_python/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_languages.zsh
-source ~/60o_Doc_Qiuy/60_System/mq_languages/oq_python/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_python.zsh
-# if [ -f '~/60_System/60m_Languages/60o_Python/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-python-zsh' ]; then
-#     . '~/60_System/60m_Languages/60o_Python/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-python-zsh'
+source $HOME/60o_Doc_Qiuy/60_System/mq_languages/oq_python/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_languages.zsh
+source $HOME/60o_Doc_Qiuy/60_System/mq_languages/oq_python/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_python.zsh
+# if [ -f '$HOME/60_System/60m_Languages/60o_Python/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-python-zsh' ]; then
+#     . '$HOME/60_System/60m_Languages/60o_Python/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-python-zsh'
 #     # break
 # fi
 
@@ -400,9 +400,9 @@ zplug "b4b4r07/79ee61f7c140c63d2786", \
 ########################################
 # oq Git
 ########################################
-source ~/60o_Doc_Qiuy/50_Environment/nq_version_control/oq_git/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_git.zsh
-# if [ -f '~/50_Environment/10r_Control/60o_Git/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-git-zsh' ]; then
-#     . "~/50_Environment/10r_Control/60o_Git/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-git-zsh"
+source $HOME/60o_Doc_Qiuy/50_Environment/nq_version_control/oq_git/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_git.zsh
+# if [ -f '$HOME/50_Environment/10r_Control/60o_Git/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-git-zsh' ]; then
+#     . "$HOME/50_Environment/10r_Control/60o_Git/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-git-zsh"
 #     # break
 # fi
 ########################################
@@ -628,7 +628,7 @@ zplug "hlissner/zsh-autopair"
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/nvm
 #############################
 
-#  Automatically add ~/opt/*/bin to $PATH
+#  Automatically add $HOME/opt/*/bin to $PATH
 # https://github.com/jreese/zsh-opt-path
 
 #  A ZSH plugin with utility functions to work with PostgreSQL.
@@ -807,7 +807,7 @@ alias -g C='| wc -l'
 ####################
 # tq history
 ####################
-# HISTFILE=~/.histfile
+HISTFILE=$HOME/.histfile
 ########################################
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/ember-cli
 ########################################
@@ -871,7 +871,7 @@ zstyle ':completion:*:approximate:*' max-errors 1 numeric
 ####################
 # hq navigation
 ####################
-source ~/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_shell/oq_zsh/iq_bindings/iqi_production/hq_navigating.zsh
+source $HOME/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_shell/oq_zsh/iq_bindings/iqi_production/hq_navigating.zsh
 
 ####################
 # bq source
@@ -910,8 +910,8 @@ zstyle ':completion:*' squeeze-slashes true
 # Ignore dups removed to prepare for zsh-history-analysis
 # setopt HIST_IGNORE_DUPS
 #https://github.com/bamos/zsh-history-analysis
-# HISTSIZE=1000000000
-# SAVEHIST=$HISTSIZE
+HISTSIZE=1000000000
+SAVEHIST=$HISTSIZE
 # setopt EXTENDED_HISTORY
 ####################
 # zq50j_preferred_program
@@ -932,12 +932,12 @@ export EDITOR="vim"
 ########################################
 # 60_System
 ########################################
-source ~/60o_Control_Qiuy/60_System/oq_shell/oq_zsh/iq_mappings/iqi_production/iq_system.zsh
+source $HOME/60o_Control_Qiuy/60_System/oq_shell/oq_zsh/iq_mappings/iqi_production/iq_system.zsh
 
 ###############
 # iq history
 ###############
-source ~/60o_Flow_Qiuy/50_Environment/uq_searching/iq_history/oq_shell/oq_zsh/iq_bindings/iqi_production/uq_history.zsh
+source $HOME/60o_Flow_Qiuy/50_Environment/uq_searching/iq_history/oq_shell/oq_zsh/iq_bindings/iqi_production/uq_history.zsh
 
 ###############
 function hq {
@@ -979,7 +979,7 @@ function uq {
     # msg="$*"
     peg=$(ag --depth -1 -l)
     print $peg
-    # | &>~/50_Environment/50n_Pathways/60o_Python/q60oag-$msg
+    # | &>$HOME/50_Environment/50n_Pathways/60o_Python/q60oag-$msg
 }
 
 function fzf_tmux_helper() {
@@ -987,7 +987,7 @@ function fzf_tmux_helper() {
   local cmd=$1
   shift
   tmux split-window -p 40 \
-    "bash -c \"\$(tmux send-keys -t $TMUX_PANE \"\$(source ~/.fzf.zsh; $cmd)\" $*)\""
+    "bash -c \"\$(tmux send-keys -t $TMUX_PANE \"\$(source $HOME/.fzf.zsh; $cmd)\" $*)\""
 }
 
 # This is the function we are going to run in the split pane.
@@ -1002,33 +1002,37 @@ function fzf_tmux_dir() {
      paste -sd" " -' Space
 }
 
+source $HOME/60o_Control_Qiuy/10_Activity/xq_concatenating/oq_shell/oq_zsh/xq_compile_mappings_vim.zsh
 # oq Vim
-function vqr() {
-    local pathway
-    pathway="~/10_Activity/10r_Initiatives/10x_Concatenating/60o_Shell_Qiuy/"
-    # local activation
-    # activation="./"
-    local mappings
-    local settings
-    local plugins
-    mappings="sq10r-compiling-mappings-vim.sh"
-    plugins="sq10r-compiling-plugins-vim.sh"
-    settings="sq10r-compiling-settings-vim.sh"
-    $pathway$activation$mappings
-    $pathway$activation$settings
-    $pathway$activation$plugins
-}
+# function vqr() {
+#     local pathway
+#     local mappings
+#     local settings
+#     local plugins
+#     pathway="$HOME/60o_Control_Qiuy/10_Activity/xq_concatenating/oq_shell/oq_zsh/"
+#     # local activation
+#     # activation="./"
+#     mappings="sq10r-compiling-mappings-vim.sh"
+#     plugins="sq10r-compiling-plugins-vim.sh"
+#     settings="sq10r-compiling-settings-vim.sh"
+#     # $pathway$activation$mappings
+#     # $pathway$activation$settings
+#     # $pathway$activation$plugins
+#     $pathway$mappings
+#     $pathway$settings
+#     $pathway$plugins
+# }
 
 
 # Scripts for searching Vim Qiuy configs
-source ~/60o_Flow_Qiuy/40_Movement/uq_searching/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_search_configs_vim_qiuy.zsh
-# if [ -f '~/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh' ]; then
-#     . "~/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh"
+source $HOME/60o_Flow_Qiuy/40_Movement/uq_searching/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_search_configs_vim_qiuy.zsh
+# if [ -f '$HOME/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh' ]; then
+#     . "$HOME/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh"
 # fi
 
 
 # rq Analyse Softlinks
-source ~/60o_Flow_Qiuy/50_Environment/nq_softlinks/10_Activity/rq_analysis/oq_zsh/rq_analyse_softlinks.zsh
+source $HOME/60o_Flow_Qiuy/50_Environment/nq_softlinks/10_Activity/rq_analysis/oq_zsh/rq_analyse_softlinks.zsh
 
 # Set priority to load command like a nice command
 # zsh syntax highlighting with dircolors in realtime e.g.,
