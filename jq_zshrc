@@ -110,7 +110,7 @@ source $HOME/60o_Control_Qiuy/10_Activity/rq_tasks/oq_taskwarrior/oq_zsh/rq_cont
 ###################
 # tq Notes
 ###################
-source $HOME/60o_Control_Qiuy/20_Content/tq_notes/oq_shell/oq_zsh/oqo_scripts/oq_notes.zsh
+source $HOME/1q_ctrl-qiuy/20_Content/tqt_notes/oq_shell/oq_zsh/oqo_scripts/oq_notes.zsh
 
 ####################
 # dq alter
