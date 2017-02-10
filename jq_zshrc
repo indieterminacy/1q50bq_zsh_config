@@ -91,7 +91,7 @@ source $HOME/60o_Understand_Qiuy/10_Activity/rq_analyse/oq_zsh/oqo_plugins/iqi_p
 # rq Tasks
 ####################
 function tt() {
-    projects=$($HOME/10_Activity/10r_Initiatives/10r_Tasks/oq Shell_Qiuy/projects_without_next_action.sh)
+    projects=$($HOME/1q_ctrl-qiuy/10_Activity/iqi_states/oq_taskwarrior/oq_zsh/projects_without_next_action.sh)
     if [ "$projects" != "" ]
     then
       print_colored_text RED "Attention: The following projects don't currently have a next action:\n"
@@ -254,8 +254,9 @@ function hq_navigate_application() {
 # uq searching
 ####################
 # Identify other file in folder
-source $HOME/60o_Flow_Qiuy/40_Movement/uq_searching/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_search.zsh
-source $HOME/60o_Flow_Qiuy/40_Movement/uq_searching/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_search_configs_vim_qiuy.zsh
+source $HOME/5q_env-qiuy/50_Environment/uq_searching/oq_zsh/oqo_search.zsh
+source $HOME/5q_env-qiuy/50_Environment/uq_searching/oq_zsh/sq40u-search-zsh
+source $HOME/1q_ctrl-qiuy/50_Environment/uq_searching/oq_zsh/oqo_search_configs_vim_qiuy.zsh
 # if [ -f '$HOME/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-zsh' ]; then
 #     . '$HOME/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-zsh'
 #     # break
@@ -1041,7 +1042,7 @@ source $HOME/60o_Control_Qiuy/10_Activity/xq_concatenating/oq_shell/oq_zsh/xq_co
 
 
 # Scripts for searching Vim Qiuy configs
-source $HOME/60o_Flow_Qiuy/40_Movement/uq_searching/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_search_configs_vim_qiuy.zsh
+source $HOME/1q_ctrl-qiuy/50_Environment/uq_searching/oq_zsh/oqo_search_configs_vim_qiuy.zsh
 # if [ -f '$HOME/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh' ]; then
 #     . "$HOME/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh"
 # fi
