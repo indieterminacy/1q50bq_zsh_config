@@ -41,7 +41,7 @@ fi
 #####################
 # nq Package Managers
 #####################
-source $HOME/60o_Tools_Qiuy/50_Environment/nq_package_managers/oq_shell/oq_zsh/oqo_packages/iqi_production/oqo_package_managers.zsh
+source $HOME/5q_env-qiuy/60_System/nq_package-managers/oq_zsh/oqo_package_managers.zsh
 
 #####################
 # Deleted file, to rebase
@@ -66,12 +66,12 @@ source $HOME/60o_Tools_Qiuy/50_Environment/nq_package_managers/oq_shell/oq_zsh/o
 ####################
 # sq10r_loading
 ####################
-source $HOME/60o_Flow_Qiuy/50_Environment/iq_loading/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_loading.zsh
+source $HOME/5q_env-qiuy/50_Environment/iq_loading/oqo_loading.zsh
 
 ####################
 # iq compiling
 ####################
-source $HOME/60o_Control_Qiuy/50_Environment/iq_compiling/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_compiling.zsh
+source $HOME/6q_tool-qiuy/50_Environment/iqi_compiling/oq_zsh/oqo_compiling.zsh
 
 ####################
 # rq control
