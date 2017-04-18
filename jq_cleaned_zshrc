@@ -33,3 +33,136 @@ fi
 ##############
 # Then, source packages and add commands to $PATH
 zplug load --verbose
+
+####################
+# rq control
+####################
+source $HOME/4q50nqn_pathways/oq_zsh/5q50iqi_jq_interacting_configurations/oqo_control.zsh
+
+
+####################
+# rq analysing
+####################
+source $HOME/4q50nqn_pathways/oq_zsh/5q50rq_oqo_jq_analysing_plugins_configurations/oqo_analysis.zsh
+
+####################
+# rq Tasks
+####################
+####################
+# oq Taskwarrior
+####################
+source $HOME/4q50nqn_pathways/oq_zsh/1q10rqr_oq_oqo_tasks_taskwarrior_plugins/rq_control_taskwarrior.zsh
+
+###################
+# tq Notes
+###################
+source $HOME/4q50nqn_pathways/oq_zsh/1q20tqt_oqo_notes_scripts/oq_notes.zsh
+
+####################
+# dq edit
+####################
+source $HOME/4q50nqn_pathways/oq_zsh/5q50dq_oqo_jq_editing_plugins_configurations/oqo_editing.zsh
+
+####################
+# iq_creating
+####################
+source $HOME/4q50nqn_pathways/oq_zsh/1q50cqc_oq_oqo_version-control_git_scripts/1q50iq_tq_create_repo.zsh
+
+####################
+# rq_adding
+####################
+####################
+## fq_licences
+####################
+source $HOME/4q50nqn_pathways/oq_zsh/1q50cqc_oqo_version-control_scripts/1q10tq_adding_licenses.zsh
+
+####################
+# rq inserting
+####################
+source $HOME/4q50nqn_pathways/oq_zsh/5q50dqd_iqi_inserting_bindings/oqo_inserting.zsh
+
+####################
+# rq completing
+####################
+source $HOME/4q50nqn_pathways/oq_zsh/5q50iqi_dqd_oqo_completing_inserting_plugins/oqo_completing.zsh
+
+########################################
+# 20_Content
+########################################
+########################################
+# iq Extracting
+########################################
+source $HOME/4q50nqn_pathways/oq_zsh/5q50xq_oqo_extracting_plugins/oqo_extract.zsh
+
+########################################
+# 30_Display
+########################################
+########################################
+# yq Emphasizing
+########################################
+source $HOME/4q50nqn_pathways/oq_zsh/5q50yq_oqo_emphasizing_plugins/yq_emphasis.zsh
+
+####################
+# tq reminders
+####################
+source $HOME/4q50nqn_pathways/oq_zsh/5q10tqt_oqo_reminders_plugins/tq_reminders.zsh
+
+####################
+# yq output
+####################
+source $HOME/4q50nqn_pathways/oq_zsh/5q30yq_oqo_outputting_plugins/oqo_output.zsh
+
+####################
+# vq colors
+####################
+source $HOME/4q50nqn_pathways/oq_zsh/5q30gq_oqo_color_plugins/oqo_colors.zsh
+
+####################
+# vq themes
+####################
+source $HOME/4q50nqn_pathways/oq_zsh/5q50gqg_oqo_themes_plugins/oqo_themes.zsh
+
+########################################
+# 40_Movement
+########################################
+####################
+# uq orientation
+####################
+source $HOME/4q50nqn_pathways/oq_zsh/5q50uq_oqo_orientating_plugins/uq_orientation.zsh
+# if [ -f '$HOME/40_Movement/40u_Orientating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-orientation-zsh' ]; then
+#     . '$HOME/40_Movement/40u_Orientating/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-orientation-zsh'
+#     # break
+# fi
+
+####################
+# hq navigation
+####################
+source $HOME/4q50nqn_pathways/oq_zsh/5q50hq_oqo_navigating_plugins/oqo_navigation.zsh
+
+# oqo Qiuy Script
+# kq filetype
+# TODO Check
+source $HOME/4q50nqn_pathways/oq_zsh/1q40hq_oqo_navigating_scripts/hq_navigating_filter_filetype.zsh
+
+###
+# hq Navigation Application
+###
+source $HOME/4q50nqn_pathways/oq_zsh/1q40hq_oqo_navigating_scripts/hq_oq_navigating_applications.zsh
+
+####################
+# uq searching
+####################
+# Identify other file in folder
+source $HOME/5q_env-qiuy/50_Environment/uq_searching/oq_zsh/oqo_plugins/oqo_search.zsh
+source $HOME/5q_env-qiuy/50_Environment/uq_searching/oq_zsh/oqo_plugins/sq40u-search-zsh
+source $HOME/1q_ctrl-qiuy/50_Environment/uq_searching/oq_zsh/oqo_scripts/oqo_search_configs_vim_qiuy.zsh
+
+####################
+# bq transferring
+####################
+####################
+## oq_git
+####################
+source $HOME/1q_ctrl-qiuy/40_Movement/bq_transferring/oq_git/oqo_scripts/4q40bq_oq_transferring_git.zsh
+
+
