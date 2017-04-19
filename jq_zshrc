@@ -123,21 +123,12 @@ source $HOME/60o_Flow_Qiuy/40_Movement/bq_transferring/oq_shell/oq_zsh/oqo_plugi
 ####################
 # bq sourcing
 ####################
-source $HOME/60o_Control_Qiuy/50_Environment/iq_sourcing/oq_shell/oq_zsh/oqo_plugins/iqi_production/
+source /home/masterp47/60o_Control_Qiuy/50_Environment/iq_sourcing/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_sourcing.zsh
 
 ####################
 # bq hooks
 ####################
 source $HOME/60o_Flow_Qiuy/50_Environment/bq_hooks/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_hooks.zsh
-
-########################################
-# 50_Environment
-########################################
-source $HOME/60o_Doc_Qiuy/50_Environment/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_environment.zsh
-# if [ -f '$HOME/50_Environment/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq50-environment-zsh' ]; then
-#     . '$HOME/50_Environment/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq50-environment-zsh'
-#     # break
-# fi
 
 ####################
 # iq testing
@@ -154,15 +145,6 @@ source $HOME/60o_Control_Qiuy/50_Environment/nq_testing/oq_shell/oq_zsh/oqo_plug
 # iq permissions
 ####################
 source $HOME/60o_Control_Qiuy/50_Environment/iq_access/iq_permissions/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_permissions.zsh
-
-########################################
-# 60_System
-########################################
-source $HOME/60o_Doc_Qiuy/60_System/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_system.zsh
-# if [ -f '$HOME/60_System/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60-system-zsh' ]; then
-#     . '$HOME/60_System/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60-system-zsh'
-#     # break
-# fi
 
 ####################
 # sq60k-databases
@@ -185,12 +167,6 @@ source $HOME/6q_tools-qiuy/60_System/mq_languages/oq_perl/oqo_plugins/jq_oq_conf
 source $HOME/6q_tools-qiuy/60_System/mq_languages/oq_php/oqo_plugins/jq_oq_configuration_php.zsh
 source $HOME/6q_tools-qiuy/60_System/mq_languages/oq_python/oqo_plugins/jq_oq_configuration_python.zsh
 source $HOME/6q_tools-qiuy/60_System/mq_languages/oq_ruby/oqo_plugins/jq_oq_configuration_ruby.zsh
-
-# if [ -f '$HOME/60_System/60m_Languages/60o_Python/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-python-zsh'
-# ]; then
-#     . '$HOME/60_System/60m_Languages/60o_Python/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-python-zsh'
-#     # break
-# fi
 
 ###################
 # 60o_Duell
@@ -230,29 +206,11 @@ source $HOME/6q_tools-qiuy/60_System/mq_languages/oq_ruby/oqo_plugins/jq_oq_conf
 # zplug "jsks/zsh-plugins"
 ########################################
 
-# Support oh-my-zsh plugins and the like
-zplug "plugins/git",   from:oh-my-zsh, if:"which git"
 # 'Not loaded'
 # zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 
-# Run a command after a plugin is installed/updated
-zplug "tj/n", \
-    hook-build:"make install"
-
 # zplug "mollifier/anyframe", commit:4c23cb60
 
-# Install if "if:" tag returns true
-zplug "hchbaw/opp.zsh", if:"(( ${ZSH_VERSION%%.*} < 5 ))"
-
-# Seems to be an issue with [[
-# pieces
-# Can manage gist file just like other plugins
-zplug "b4b4r07/79ee61f7c140c63d2786", \
-    from:gist, \
-    as:command, \
-    use:get_last_pane_path.sh
-
-# Seems to be a problem loading this script
 
 # Group dependencies, emoji-cli depends on
 # jq in this example
@@ -271,14 +229,7 @@ zplug "b4b4r07/79ee61f7c140c63d2786", \
 #     rename-to:jq
 # zplug "b4b4r07/emoji-cli", \
 #     on:"stedolan/jq"
-########################################
-# oq Git
-########################################
-source $HOME/60o_Doc_Qiuy/50_Environment/nq_version_control/oq_git/oq_shell/oq_zsh/oqo_plugins/iqi_production/oqo_git.zsh
-# if [ -f '$HOME/50_Environment/10r_Control/60o_Git/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-git-zsh' ]; then
-#     . "$HOME/50_Environment/10r_Control/60o_Git/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq60o-git-zsh"
-#     # break
-# fi
+
 ########################################
 # This repo contains some useful plugins for oh-my-zsh.
 # Including nginx, lesscss, memcached
@@ -290,9 +241,6 @@ source $HOME/60o_Doc_Qiuy/50_Environment/nq_version_control/oq_git/oq_shell/oq_z
 
 #gvm (Go version manager) plugin for zsh
 #https://github.com/horosgrisa/zsh-gvm
-
-#  peco/percol/fzf wrapper plugin for zsh
-zplug "mollifier/anyframe"
 
 ########################################
 # UNSetting, need to tighten
@@ -336,11 +284,13 @@ zplug "mollifier/anyframe"
 # specify path and options for peco, percol, or fzf
 # Debug
 # zplug ":anyframe:selector:fzf:" command 'fzf --extended'
+##################
+# hq_navigating
+##################
 
  #zsh automatic complete-word and list-choices. Originally incr-0.2.zsh by
  #y.fujii <y-fujii at mimosa-pudica.net>
 # https://github.com/hchbaw/auto-fu.zsh
-#
 
 # Autoenv automatically sources (known/whitelisted) .env and .out files.
 # https://github.com/horosgrisa/autoenv
@@ -360,44 +310,8 @@ zplug "mollifier/anyframe"
 #https://github.com/vladmrnv/statify
 
 #####################################
-# gq_jq_color_settings
-#####################################
-# For providing settings to permit Tmux programs to use colour appropriately
-source $HOME/4q50nqn_pathways/oq_zsh/5q30gq_jq_color_configurations/oq_jq_tmux_configuration.zsh
-
-#####################################
-# hq Navigation
-#####################################
-# Zsh can be configured to remember the DIRSTACKSIZE last visited folders.
-# This can then be used to cd them very quickly.
-# You need to add some lines to your configuration file:
-# Note: This will not work if you have more than one zsh session open, and
-# attempt to cd, due to a conflict in both sessions writing to the same file.
-DIRSTACKFILE="$HOME/.cache/zsh/dirs"
-if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
-  dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
-  [[ -d $dirstack[1] ]] && cd $dirstack[1]
-fi
-chpwd() {
-  print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
-}
-
-DIRSTACKSIZE=20
-
-setopt AUTO_PUSHD PUSHD_SILENT PUSHD_TO_HOME
-
-## Remove duplicate entries
-setopt PUSHD_IGNORE_DUPS
-
-## This reverts the +/- operators.
-setopt PUSHD_MINUS
-#####################################
 #  Add zsh's missing hooks, and support for user-defined hooks
 # https://github.com/willghatch/zsh-hooks
-
-# Directory listings for zsh with git features
-zplug "supercrabtree/k"
-
 
 #  Convert seconds to a human readable string: 165392 → 1d 21h 56m 32s
 # https://github.com/sindresorhus/pretty-time-zsh
@@ -430,9 +344,6 @@ zplug "supercrabtree/k"
 # https://github.com/willghatch/zsh-snippets
 # http://zshwiki.org/home/examples/zleiab
 
-#  A modified version of oh-my-zsh's plugin colorized-man
-zplug "zlsun/solarized-man"
-# https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/colored-man-pages
 #https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/man
 
 #  View vim plugin manuals (help) like man in zsh
@@ -456,8 +367,6 @@ zplug "zlsun/solarized-man"
 #  Because your terminal should be able to perform tasks asynchronously without external tools!
 # https://github.com/mafredri/zsh-async
 
-#  Auto-close and delete matching delimiters in zsh
-zplug "hlissner/zsh-autopair"
 
 #  Fish-like autosuggestions for zsh
 #  Seems broken because of configuration issues
@@ -496,6 +405,7 @@ zplug "hlissner/zsh-autopair"
 # https://github.com/KyleChamberlin/zsh_maven_plugin
 # My Zsh plugin for Maven
 #https://github.com/lesaint/lesaint-mvn
+
 #############################
 # oq Node
 #############################
@@ -521,14 +431,6 @@ zplug "hlissner/zsh-autopair"
 
 #  ZSH plugin to open Travis CI page for the current repo
 # https://github.com/denolfe/zsh-travis
-#####################
-# oq Tmux
-#####################
-#  Simple plugin for using tmux with zsh and SSH
-# https://github.com/TBSliver/zsh-plugin-tmux-simple
-
-#  Terminal/tmux titles based on current location and task
-# https://github.com/jreese/zsh-titles
 ######################
 #  Sane bindings for zsh's vi mode so it behaves more vim like
 # https://github.com/sharat87/zsh-vim-mode
@@ -673,293 +575,3 @@ zplug "hlissner/zsh-autopair"
 #repository.
 #https://github.com/sobolevn/git-secret
 #
-########################################
-# 10_Activity
-########################################
-
-####################
-# zq10r_analysis
-####################
-# Global aliases can be used anywhere in the command line
-alias -g C='| wc -l'
-########################################
-# 20_Content
-########################################
-####################
-# tq history
-####################
-HISTFILE=$HOME/.histfile
-########################################
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/ember-cli
-########################################
-# vq Themes
-########################################
-# For evaluating themes
-autoload -U promptinit
-promptinit
-########################################
-# yq Emphasis
-########################################
-# alias -g D="DISPLAY=:0.0"
-# alias -g ED="export DISPLAY=:0.0"
-alias -g EH='|& head'
-alias -g H='| head'
-alias -g HL='|& head -20'
-alias -g ETL='|& tail -20'
-alias -g S='| sort'
-alias -g NS='| sort -n'
-alias -g RNS='| sort -nr'
-alias -g US='| sort -u'
-alias -g ET='|& tail'
-alias -g T='| tail'
-alias -g TL='| tail -20'
-alias -g M='| more'
-alias -g EL='|& less'
-alias -g ELS='|& less -S'
-# alias -g LL="2>&1 | less"
-alias -g L="| less"
-alias -g LS='| less -S'
-########################################
-# 40_Movement
-########################################
-####################
-# uq orientation
-####################
-# cd will never select the parent directory (e.g.: cd ../<TAB>):
-zstyle ':completion:*:cd:*' ignore-parents parent pwd
-# History search
-[[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
-[[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
-# vi style incremental search
-bindkey '^R' history-incremental-search-backward
-bindkey '^S' history-incremental-search-forward
-bindkey '^P' history-search-backward
-bindkey '^N' history-search-forward
-####################
-# rq completion
-####################
-# Ignore completion functions for commands you don’t have:
-zstyle ':completion:*:functions' ignored-patterns '_*'
-####################
-# uq searching
-####################
-alias -g EG='|& egrep'
-alias -g G='| egrep'
-# Fuzzy matching of completions for when you mistype them:
-zstyle ':completion:*' completer _complete _match _approximate
-zstyle ':completion:*:match:*' original only
-zstyle ':completion:*:approximate:*' max-errors 1 numeric
-####################
-# hq navigation
-####################
-source $HOME/60o_Flow_Qiuy/40_Movement/hq_navigating/oq_shell/oq_zsh/iq_bindings/iqi_production/hq_navigating.zsh
-
-####################
-# bq source
-####################
-# Source zplug plugins and add commands to $PATH
-zplug load --verbose
-# Unlike bash, zsh does not enable a built in help command. To use help in zsh,
-# add following to your zshrc:
-autoload -U run-help
-autoload run-help-git
-autoload run-help-svn
-autoload run-help-svk
-# unalias run-help
-alias help=run-help
-########################################
-# 50_Environment
-########################################
-####################
-# iq jobs
-####################
-#A ZSH plugin that allows you to foreground the last backgrounded job (when you
-#would normally do fg) using Ctrl+Z. So in your terminal, you hit Ctrl+Z to
-#background a job, then Ctrl+Z again to foreground it.
-#https://github.com/theunraveler/zsh-fancy_ctrl_z
-####################
-# iq context
-####################
-# If you end up using a directory as argument, this will remove the trailing
-# slash (usefull in ln)
-
-zstyle ':completion:*' squeeze-slashes true
-####################
-# tq history
-####################
-# Preventing duplicate lines in the history
-# Ignore dups removed to prepare for zsh-history-analysis
-# setopt HIST_IGNORE_DUPS
-#https://github.com/bamos/zsh-history-analysis
-HISTSIZE=1000000000
-SAVEHIST=$HISTSIZE
-# setopt EXTENDED_HISTORY
-####################
-# zq50j_preferred_program
-####################
-# Suffix aliases are supported in zsh since version 4.2.0
-alias -s tex=vim
-alias -s html=w3m
-alias -s org=w3m
-alias -s pdf=zathura
-alias -s zshrc=vim
-####################
-# zq10r_editor
-####################
-####################
-# oq Vim
-####################
-export EDITOR="vim"
-########################################
-# 60_System
-########################################
-source $HOME/60o_Control_Qiuy/60_System/oq_shell/oq_zsh/iq_mappings/iqi_production/iq_system.zsh
-
-###############
-# iq history
-###############
-source $HOME/60o_Flow_Qiuy/50_Environment/uq_searching/iq_history/oq_shell/oq_zsh/iq_bindings/iqi_production/uq_history.zsh
-
-###############
-function hq {
-# function 10d-create-or-40h-navigate-folder {
-    local msg
-    msg="$*"
-    mkdir -p $msg
-    cd $msg
-    ranger
-}
-
-function hv {
-    local msg
-    msg="$*"
-    vifm -c $msg
-}
-
-function vh {
-    VQ=full vim .
-}
-
-function vq {
-    local msg
-    msg="$*"
-    VQ=full vim $msg
-# local msg
-    # msg='<C-\><C-n>:e %d/%f<CR>'
-    # VQ=full vim --remote-send $msg
-}
-function mq {
-    local msg
-    msg="$*"
-    mc $msg
-}
-
-function uq {
-    local peg
-    # local msg
-    # msg="$*"
-    peg=$(ag --depth -1 -l)
-    print $peg
-    # | &>$HOME/50_Environment/50n_Pathways/60o_Python/q60oag-$msg
-}
-
-function fzf_tmux_helper() {
-  [ -n "$TMUX_PANE" ] || return
-  local cmd=$1
-  shift
-  tmux split-window -p 40 \
-    "zsh -c \"\$(tmux send-keys -t $TMUX_PANE \"\$(source $HOME/.fzf.zsh; $cmd)\" $*)\""
-}
-
-# This is the function we are going to run in the split pane.
-# - "find" to list the directories
-# - "sed" will escape spaces in the paths.
-# - "paste" will join the selected paths into a single line
-function fzf_tmux_dir() {
-  fzf_tmux_helper \
-    'find * -path "*/\.*" -prune -o -type d -print 2> /dev/null |
-     fzf --multi |
-     sed "s/ /\\\\ /g" |
-     paste -sd" " -' Space
-}
-# If you prefer to run fzf in full screen mode,
-# add --no-height to your $FZF_DEFAULT_OPTS like follows:
-# export FZF_DEFAULT_OPTS='--no-height --no-reverse'
-
-# Or if you prefer to start in a tmux split pane, set $FZF_TMUX to 1.
-export FZF_TMUX=1
-
-export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
-
-export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden --bind '?:toggle-preview'"
-
-source $HOME/60o_Control_Qiuy/10_Activity/xq_concatenating/oq_shell/oq_zsh/xq_compile_mappings_vim.zsh
-#
-#
-
-
-# Will return non-zero status if the current directory is not managed by git
-function is_in_git_repo() {
-  git rev-parse HEAD > /dev/null 2>&1
-}
-
-function gt() {
-  # "Nothing to see here, move along"
-  is_in_git_repo || return
-
-  # Pass the list of the tags to fzf-tmux
-  # - "{}" in preview option is the placeholder for the highlighted entry
-  # - Preview window can display ANSI colors, so we enable --color=always
-  # - We can terminate `git show` once we have $LINES lines
-  git tag --sort -version:refname |
-    fzf-tmux --multi --preview-window right:70% \
-             --preview 'git show --color=always {} | head -'$LINES
-}
-
-# Then we bind it to a key.
-
-# To clean
-# bindkey -M '"\er": redraw-current-line'
-# bindkey -M '"\C-g\C-t": "$(gt)\e\C-e\er"'
-
-# oq Vim
-# function vqr() {
-#     local pathway
-#     local mappings
-#     local settings
-#     local plugins
-#     pathway="$HOME/60o_Control_Qiuy/10_Activity/xq_concatenating/oq_shell/oq_zsh/"
-#     # local activation
-#     # activation="./"
-#     mappings="sq10r-compiling-mappings-vim.sh"
-#     plugins="sq10r-compiling-plugins-vim.sh"
-#     settings="sq10r-compiling-settings-vim.sh"
-#     # $pathway$activation$mappings
-#     # $pathway$activation$settings
-#     # $pathway$activation$plugins
-#     $pathway$mappings
-#     $pathway$settings
-#     $pathway$plugins
-# }
-
-
-# Scripts for searching Vim Qiuy configs
-source $HOME/1q_ctrl-qiuy/50_Environment/uq_searching/oq_zsh/oqo_scripts/oqo_search_configs_vim_qiuy.zsh
-# if [ -f '$HOME/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh' ]; then
-#     . "$HOME/40_Movement/40u_Searching/60o_Shell_Qiuy/60o_ZSH/60o_Plugins/50i_Production/sq40u-search-configs-vim-qiuy.sh"
-# fi
-
-
-# rq Analyse Softlinks
-source $HOME/60o_Flow_Qiuy/50_Environment/nq_softlinks/10_Activity/rq_analysis/oq_zsh/rq_analyse_softlinks.zsh
-
-# Set priority to load command like a nice command
-# zsh syntax highlighting with dircolors in realtime e.g.,
-# zsh-syntax-highlighting must be loaded
-#https://github.com/trapd00r/zsh-syntax-highlighting-filetypes
-# after executing compinit command and sourcing other plugins
-zplug "zsh-users/zsh-syntax-highlighting"
-# zplug "zsh-users/zsh-syntax-highlighting", \
-    # nice:10
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
