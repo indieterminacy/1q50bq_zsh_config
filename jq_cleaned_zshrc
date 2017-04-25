@@ -1,6 +1,9 @@
+#!/usr/bin/zsh
+
 ######################
 # jq_variables
 ######################
+QZSHSETTINGS="$HOME/5q_env-qiuy/50_Environment/iqi_shells/oq_zsh/jq_settings/"
 QZSHPATHWAYS="$HOME/4q50nqn_pathways/oq_zsh"
 
 # autoload -Uz compinit
@@ -14,17 +17,7 @@ fi
 
 # Essential
 source $HOME/.zplug/init.zsh
-
-# What does this do?
-# zplug "junegunn/fzf", \
-    # from:github, \
-    # at:0.11.0, \
-    # as:command, \
-    # use:"*darwin*amd64*", \
-    # rename-to:fzf
-# It grabs the binary of fzf-bin version 0.11.0 from GitHub Release and uses
-# the file that matches "*darwin*amd64" as a command called fzf!
-
+#
 ####################
 # rq_installling
 ####################
@@ -38,186 +31,13 @@ fi
 ##############################
 # jq_configuring
 ##############################
-source $HOME/5q_env-qiuy/50_Environment/iqi_shells/oq_zsh/jq_settings/jq_oqo_settings_plugins.zsh
-
-source $HOME/5q_env-qiuy/50_Environment/iqi_shells/oq_zsh/jq_settings/jq_oqo_settings_scripts.zsh
-
-#####################################
-# hq Navigation
-#####################################
-# Zsh can be configured to remember the DIRSTACKSIZE last visited folders.
-# This can then be used to cd them very quickly.
-# You need to add some lines to your configuration file:
-# Note: This will not work if you have more than one zsh session open, and
-# attempt to cd, due to a conflict in both sessions writing to the same file.
-# DIRSTACKFILE="$HOME/.cache/zsh/dirs"
-# if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
-#   dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
-#   [[ -d $dirstack[1] ]] && cd $dirstack[1]
-# fi
-# chpwd() {
-#   print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
-# }
-
-# DIRSTACKSIZE=20
-
-setopt AUTO_PUSHD PUSHD_SILENT PUSHD_TO_HOME
-
-## Remove duplicate entries
-setopt PUSHD_IGNORE_DUPS
-
-## This reverts the +/- operators.
-setopt PUSHD_MINUS
-
-#######################################
-# iqi_bindings
-#######################################
-########################################
-# 10_Activity
-########################################
+source $QZSHSETTINGS/jq_oqo_settings_plugins.zsh
+source $QZSHSETTINGS/jq_oqo_settings_scripts.zsh
+source $QZSHSETTINGS/jq_50_settings_environment.zsh
+source $QZSHSETTINGS/jq_iqi_settings_bindings.zsh
 
 ####################
-# zq10r_analysis
-####################
-# Global aliases can be used anywhere in the command line
-alias -g C='| wc -l'
-########################################
-# 20_Content
-########################################
-########################################
-#https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/ember-cli
-########################################
-# vq Themes
-########################################
-# For evaluating themes
-autoload -U promptinit
-promptinit
-########################################
-# yq Emphasis
-########################################
-# alias -g D="DISPLAY=:0.0"
-# alias -g ED="export DISPLAY=:0.0"
-alias -g EH='|& head'
-alias -g H='| head'
-alias -g HL='|& head -20'
-alias -g ETL='|& tail -20'
-alias -g S='| sort'
-alias -g NS='| sort -n'
-alias -g RNS='| sort -nr'
-alias -g US='| sort -u'
-alias -g ET='|& tail'
-alias -g T='| tail'
-alias -g TL='| tail -20'
-alias -g M='| more'
-alias -g EL='|& less'
-alias -g ELS='|& less -S'
-# alias -g LL="2>&1 | less"
-alias -g L="| less"
-alias -g LS='| less -S'
-########################################
-# 40_Movement
-########################################
-####################
-# uq orientation
-####################
-# cd will never select the parent directory (e.g.: cd ../<TAB>):
-zstyle ':completion:*:cd:*' ignore-parents parent pwd
-
-# History search
-[[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
-[[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
-# vi style incremental search
-bindkey '^R' history-incremental-search-backward
-bindkey '^S' history-incremental-search-forward
-bindkey '^P' history-search-backward
-bindkey '^N' history-search-forward
-####################
-# rq completion
-####################
-# Ignore completion functions for commands you don’t have:
-zstyle ':completion:*:functions' ignored-patterns '_*'
-####################
-# uq searching
-####################
-alias -g EG='|& egrep'
-alias -g G='| egrep'
-# Fuzzy matching of completions for when you mistype them:
-zstyle ':completion:*' completer _complete _match _approximate
-zstyle ':completion:*:match:*' original only
-zstyle ':completion:*:approximate:*' max-errors 1 numeric
-
-####################
-# bq source
+# bq_sourcing
 ####################
 # Source zplug plugins and add commands to $PATH
-zplug load --verbose
-# Unlike bash, zsh does not enable a built in help command. To use help in zsh,
-# add following to your zshrc:
-autoload -U run-help
-autoload run-help-git
-autoload run-help-svn
-autoload run-help-svk
-# unalias run-help
-alias help=run-help
-########################################
-# 50_Environment
-########################################
-####################
-# iq jobs
-####################
-#A ZSH plugin that allows you to foreground the last backgrounded job (when you
-#would normally do fg) using Ctrl+Z. So in your terminal, you hit Ctrl+Z to
-#background a job, then Ctrl+Z again to foreground it.
-#https://github.com/theunraveler/zsh-fancy_ctrl_z
-####################
-# iq context
-####################
-# If you end up using a directory as argument, this will remove the trailing
-# slash (usefull in ln)
-
-zstyle ':completion:*' squeeze-slashes true
-
-####################
-# tq_history
-####################
-# Preventing duplicate lines in the history
-# Ignore dups removed to prepare for zsh-history-analysis
-# setopt HIST_IGNORE_DUPS
-#https://github.com/bamos/zsh-history-analysis
-HISTSIZE=1000000000
-SAVEHIST=$HISTSIZE
-# setopt EXTENDED_HISTORY
-HISTFILE=$HOME/.histfile
-
-####################
-# zq50j_preferred_program
-####################
-# Suffix aliases are supported in zsh since version 4.2.0
-alias -s tex=vim
-alias -s html=w3m
-alias -s org=w3m
-alias -s pdf=zathura
-alias -s zshrc=vim
-####################
-# zq10r_editor
-####################
-####################
-# oq Vim
-####################
-export EDITOR="vim"
-########################################
-# 60_System
-########################################
-source $HOME/60o_Control_Qiuy/60_System/oq_shell/oq_zsh/iq_mappings/iqi_production/iq_system.zsh
-#####################
-# gq_theming
-#####################
-# Not sure if needed given move away from depreciated theme to more extensible
-# one
-# ZSH_THEME="minimal-custom"
-
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-#
-##############
-# Then, source packages and add commands to $PATH
 zplug load --verbose
