@@ -1,22 +1,33 @@
 #!/usr/bin/zsh
 
 ######################
-# jq_variables
+# nqn_pathways
 ######################
-QZSHSETTINGS="$HOME/5q_env-qiuy/50_Environment/iqi_shells/oq_zsh/jq_settings/"
+# Q1Q10
+Q1Q50="$HOME/1q_ctrl-qiuy/50_Environment"
+Q5Q50="$HOME/5q_env-qiuy/50_Environment"
+Q5Q60="$HOME/5q_env-qiuy/60_System"
+
+# oq_zsh
+QZSHPLUGINS="oq_zsh/oqo_plugins"
+QZSHSCRIPTS="oq_zsh/oqo_scripts"
+QZSHBINDINGS="oq_zsh/iqi_bindings"
+
+# oqo_zplug
+ZPLUGSETTINGS="$HOME/6q_tools-qiuy/60_System/nq_package-managers/oq_zsh/oqo_zplug/"
+
+# oqo_qiuy
+QZSHSETTINGS="$HOME/5q_env-qiuy/50_Environment/iqi_shells/oq_zsh/jq_settings"
 QZSHPATHWAYS="$HOME/4q50nqn_pathways/oq_zsh"
 
-# autoload -Uz compinit
-# compinit
-
 # Check if zplug is installed
-if [[ ! -d $HOME/.zplug ]]; then
-    git clone https://github.com/zplug/zplug $HOME/.zplug
-    source $HOME/.zplug/init.zsh && zplug update --self
+if [[ ! -d $ZPLUGSETTINGS ]]; then
+    git clone https://github.com/zplug/zplug $ZPLUGSETTINGS
+    source $ZPLUGSETTINGS/init.zsh && zplug update --self
 fi
 
 # Essential
-source $HOME/.zplug/init.zsh
+source $ZPLUGSETTINGS/init.zsh
 #
 ####################
 # rq_installling
@@ -40,4 +51,5 @@ source $QZSHSETTINGS/jq_iqi_settings_bindings.zsh
 # bq_sourcing
 ####################
 # Source zplug plugins and add commands to $PATH
-zplug load --verbose
+# zplug load --verbose
+zplug load
