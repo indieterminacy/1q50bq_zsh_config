@@ -1,5 +1,5 @@
-autoload -Uz compinit
-compinit
+# autoload -Uz compinit
+# compinit
 
 # Check if zplug is installed
 if [[ ! -d $HOME/.zplug ]]; then
@@ -102,6 +102,7 @@ source $HOME/4q50nqn_pathways/oq_zsh/5q50yq_oqo_emphasizing_plugins/yq_emphasis.
 ####################
 # tq reminders
 ####################
+# To fix drui/alias-tips
 source $HOME/4q50nqn_pathways/oq_zsh/5q10tqt_oqo_reminders_plugins/tq_reminders.zsh
 
 ####################

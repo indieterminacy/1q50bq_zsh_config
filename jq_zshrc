@@ -574,4 +574,3 @@ source $HOME/6q_tools-qiuy/60_System/mq_languages/oq_ruby/oqo_plugins/jq_oq_conf
 # A bash-tool to store your private data inside a git
 #repository.
 #https://github.com/sobolevn/git-secret
-#
