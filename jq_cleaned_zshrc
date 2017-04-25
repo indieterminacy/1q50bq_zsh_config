@@ -2,13 +2,13 @@ autoload -Uz compinit
 compinit
 
 # Check if zplug is installed
-if [[ ! -d ~/.zplug ]]; then
-    git clone https://github.com/zplug/zplug ~/.zplug
-    source ~/.zplug/init.zsh && zplug update --self
+if [[ ! -d $HOME/.zplug ]]; then
+    git clone https://github.com/zplug/zplug $HOME/.zplug
+    source $HOME/.zplug/init.zsh && zplug update --self
 fi
 
 # Essential
-source ~/.zplug/init.zsh
+source $HOME/.zplug/init.zsh
 
 # What does this do?
 # zplug "junegunn/fzf", \
@@ -30,9 +30,6 @@ if ! zplug check --verbose; then
         echo; zplug install
     fi
 fi
-##############
-# Then, source packages and add commands to $PATH
-zplug load --verbose
 
 ####################
 # rq control
@@ -345,7 +342,7 @@ zstyle ':completion:*:approximate:*' max-errors 1 numeric
 ####################
 # hq navigation
 ####################
-source /home/masterp47/5q_env-qiuy/50_Environment/hq_navigating/oq_zsh/iqi_bindings/hq_navigating.zsh
+source $HOME/5q_env-qiuy/50_Environment/hq_navigating/oq_zsh/iqi_bindings/hq_navigating.zsh
 
 ####################
 # bq source
@@ -412,42 +409,30 @@ source $HOME/60o_Control_Qiuy/60_System/oq_shell/oq_zsh/iq_mappings/iqi_producti
 ###############
 # iq history
 ###############
-source $HOME/60o_Flow_Qiuy/50_Environment/uq_searching/iq_history/oq_shell/oq_zsh/iq_bindings/iqi_production/uq_history.zsh
+source $HOME/5q_env-qiuy/50_Environment/tq_history/oq_zsh/tq_history.zsh
 
 ###############
-function hq {
-# function 10d-create-or-40h-navigate-folder {
-    local msg
-    msg="$*"
-    mkdir -p $msg
-    cd $msg
-    ranger
-}
+# hq_nqn_navigating_pathways
+###############
+source $HOME/1q_ctrl-qiuy/50_Environment/hq_navigating/oq_zsh/oqo_scripts/hq_nqn_navigating_pathways.zsh
 
-function hv {
-    local msg
-    msg="$*"
-    vifm -c $msg
-}
+###############
+# iqi_oq_loading_applications
+###############
+# oq_dmenu
+source $HOME/1q_ctrl-qiuy/50_Environment/iqi_loading/oq_zsh/oqo_scripts/iqi_oq_loading_dmenu.zsh
 
-function vh {
-    VQ=full vim .
-}
+# oq_vim
+source $HOME/1q_ctrl-qiuy/50_Environment/iqi_loading/oq_zsh/oqo_scripts/iqi_oq_loading_vim.zsh
+####
 
-function vq {
-    local msg
-    msg="$*"
-    VQ=full vim $msg
-# local msg
-    # msg='<C-\><C-n>:e %d/%f<CR>'
-    # VQ=full vim --remote-send $msg
-}
 function mq {
     local msg
     msg="$*"
     mc $msg
 }
 
+####
 function uq {
     local peg
     # local msg
@@ -493,7 +478,7 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden --bin
 ###########
 ## oq_vim
 ############
-source /home/masterp47/1q_ctrl-qiuy/20_Content/iqi_concatenating/oq_zsh/iqi_bindings/iqi_iqi_oq_compiling_bindings_vim.zsh
+source $HOME/1q_ctrl-qiuy/20_Content/iqi_concatenating/oq_zsh/iqi_bindings/iqi_iqi_oq_compiling_bindings_vim.zsh
 
 
 ############
@@ -567,4 +552,8 @@ zplug "zsh-users/zsh-syntax-highlighting"
 #####################
 ZSH_THEME="minimal-custom"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+#
+##############
+# Then, source packages and add commands to $PATH
+zplug load --verbose
