@@ -20,6 +20,10 @@ ZPLUGSETTINGS="$HOME/6q_tools-qiuy/60_System/nq_package-managers/oq_zsh/oqo_zplu
 QZSHSETTINGS="$HOME/5q_env-qiuy/50_Environment/iqi_shells/oq_zsh/jq_settings"
 QZSHPATHWAYS="$HOME/4q50nqn_pathways/oq_zsh"
 
+# Command completion
+autoload -Uz compinit
+compinit
+
 # Check if zplug is installed
 if [[ ! -d $ZPLUGSETTINGS ]]; then
     git clone https://github.com/zplug/zplug $ZPLUGSETTINGS
@@ -45,6 +49,8 @@ fi
 source $QZSHSETTINGS/jq_oqo_settings_plugins.zsh
 source $QZSHSETTINGS/jq_oqo_settings_scripts.zsh
 source $QZSHSETTINGS/jq_50_settings_environment.zsh
+source $QZSHSETTINGS/jq_nqn_settings_aliases.zsh
+source $QZSHSETTINGS/jq_iqi_settings_contexts.zsh
 source $QZSHSETTINGS/jq_iqi_settings_bindings.zsh
 
 ####################
