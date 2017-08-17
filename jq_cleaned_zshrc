@@ -59,3 +59,5 @@ source $QZSHSETTINGS/jq_iqi_settings_bindings.zsh
 # Source zplug plugins and add commands to $PATH
 # zplug load --verbose
 zplug load
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
