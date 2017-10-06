@@ -28,10 +28,12 @@ compinit
 if [[ ! -d $ZPLUGSETTINGS ]]; then
     git clone https://github.com/zplug/zplug $ZPLUGSETTINGS
     source $ZPLUGSETTINGS/init.zsh && zplug update --self
+else
+    source $ZPLUGSETTINGS/init.zsh
 fi
 
 # Essential
-source $ZPLUGSETTINGS/init.zsh
+# source $ZPLUGSETTINGS/init.zsh
 #
 ####################
 # rq_installling
@@ -43,6 +45,9 @@ if ! zplug check --verbose; then
         echo; zplug install
     fi
 fi
+
+#
+# zplug "supercrabtree/k"
 ##############################
 # jq_configuring
 ##############################
