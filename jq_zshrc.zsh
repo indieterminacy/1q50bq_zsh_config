@@ -39,7 +39,7 @@ zstyle ':zplug:tag' depth 0
 zplug load --verbose
 #####################
 # Deleted file, to rebase
-# $HOME/60o_Control_Qiuy/10_Activity/rq_
+# $HOME/1q_ctrl-qiuy/10_Activity/rq_
 # if [ -f '$HOME/10_Activity/10r_Initiatives/10r_Installing/60o_Shell_Qiuy/60o_ZSH/50j_Settings/50i_Production/sq50j-settings-install-zsh' ]; then
 #     . '$HOME/10_Activity/10r_Initiatives/10r_Installing/60o_Shell_Qiuy/60o_ZSH/50j_Settings/50i_Production/sq50j-settings-install-zsh'
 #     # break
