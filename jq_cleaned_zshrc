@@ -96,3 +96,13 @@ fi
 ## dqd_interfacing
 ##############################
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+##############################
+. /opt/context/tex/texmf-linux-64/bin
+##############################
+# [ -f ~/6q_tools-qiuy/60_System/iqi_version-control/oq_lua/oqo_luaver/luaver/luaver ] && source ~/6q_tools-qiuy/60_System/iqi_version-control/oq_lua/oqo_luaver/luaver/luaver
+# [ -f ~/6q_tools-qiuy/60_System/iqi_version-control/oq_lua/oqo_luaver/luaver/luaver/luaver.plugin.zsh ] && source ~/6q_tools-qiuy/60_System/iqi_version-control/oq_lua/oqo_luaver/luaver/luaver/luaver.plugin.zsh
+
+# [ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
+
