@@ -6,12 +6,15 @@
 ##############################
 ## nqn_pathways
 ##############################
-nqn_tq_pathways_aliases="$HOME/4q_flow-qiuy/50_Environment/nqn_pathways/oq_zsh/jq_configuring/tq_aliases.zsh"
+# TODO Migrate to 4q50nqn_pathways officually once all softlinks from earlier
+# redundant approach removed
+nqn_tq_pathways_aliases="$HOME/4q50nqn_pathways/oq_zsh/jq_configuring/tq_aliases.zsh"
+# nqn_tq_pathways_aliases="$HOME/4q_flow-qiuy/50_Environment/nqn_pathways/oq_zsh/jq_configuring/tq_aliases.zsh"
+
 ##############################
 ## nq_package-managers
 ##############################
 Q5q60nq_oq_packagemanager_zsh="zplug"
-
 
 ##############################
 # iqi_initiating
@@ -69,6 +72,7 @@ function iqi_jq_oq_initiating_settings_zsh {
             echo "QZSHSETTINGS pathway value: $QZSHSETTINGS"
             echo ""
             echo "TIP: Consider investigating whether correct alias given in ZSH pathways configuration file"
+            # TODO Build into function for loading variables file
             if [[ -f $nqn_tq_pathways_aliases ]]; then
                 echo "INFO: Relevant configuration file exists"
                 echo "nqn_tq_pathways_aliases pathway value: $nqn_tq_pathways_aliases"
@@ -99,6 +103,7 @@ fi
 
 
 ##############################
+# TODO Clarify whether this is for context only
 . /opt/context/tex/texmf-linux-64/bin
 ##############################
 # [ -f ~/6q_tools-qiuy/60_System/iqi_version-control/oq_lua/oqo_luaver/luaver/luaver ] && source ~/6q_tools-qiuy/60_System/iqi_version-control/oq_lua/oqo_luaver/luaver/luaver
