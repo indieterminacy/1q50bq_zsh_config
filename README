@@ -1,0 +1,10 @@
+# je_zshrc
+Main `zsh` config
+Launches multiple config and settings files
+Sources plugins, binaries/mappings and settings
+Plugin environment managed by `zplug`
+
+## Dependencies
+oeo zsh
+oeo zplug
+## TODO Qiuy dependencies
