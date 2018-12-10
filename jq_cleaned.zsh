@@ -57,9 +57,20 @@ fi
 # jq_configuring
 ##############################
 function iqi_jq_oq_initiating_settings_zsh {
+    nen=$HOME/4q50nqn_pathways
+    oq=zsh
+    fe=jqoqo_plugins.zsh
+    if [[ -d $nen ]] then
+        if [[ -d $nen/oq_$oq ]] then
+            source $nen/oq_$oq/$fe
+        else
+            print "Missing software pathway: $nen"
+        fi
+    else
+        print "Missing root pathway: $nen"
+    fi
     if [[ -d $oq_je_zsh_settings ]]
         then
-            source $oq_je_zsh_settings/jq_oqo_settings_plugins.zsh
             source $oq_je_zsh_settings/jq_oqo_settings_scripts.zsh
             source $oq_je_zsh_settings/jq_50_settings_environment.zsh
             source $oq_je_zsh_settings/jq_nqn_settings_aliases.zsh
