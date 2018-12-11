@@ -7,16 +7,16 @@
 ## nqn_pathways
 ##############################
 # TODO Migrate to modern pathway
-local nen="$HOME/4q_flow-qiuy/50_Environment/nqn_pathways"
-local oq="zsh"
-local jq="configuring"
-local je="tq_aliases.zsh"
-local nqn_tq_pathways_aliases="$nen/oq_$oq/jq_$jq/$je"
+local nen=$HOME/4q_flow-qiuy/50_Environment/nqn_pathways
+local oq=zsh
+local jq=configuring
+local je=tq_aliases.zsh
+local nqn_tq_pathways_aliases=$nen/oq_$oq/jq_$jq/$je
 
 ##############################
 ## nq_package-managers
 ##############################
-local Q5q60nq_oq_packagemanager_zsh="zplug"
+local Q5q60nq_oq_packagemanager_zsh=zplug
 
 ##############################
 # iqi_initiating
@@ -58,20 +58,25 @@ fi
 ##############################
 function iqi_jq_oq_initiating_settings_zsh {
     nen=$HOME/4q50nqn_pathways
-    oq=zsh
-    fe=jqoqo_plugins.zsh
+
     if [[ -d $nen ]] then
-        if [[ -d $nen/oq_$oq ]] then
-            source $nen/oq_$oq/$fe
+        local oq=zsh
+        local toby=$nen/oq_$oq
+        if [[ -d $toby ]] then
+            local f1=jqoqo_plugins.zsh
+            local f2=jq_oqo_settings_scripts.zsh
+            source $toby/$f1
+            source $toby/$f2
         else
             print "Missing software pathway: $nen"
+            print "TODO Need to search for: $f1 $f2"
         fi
     else
         print "Missing root pathway: $nen"
+        print "TODO Need to search for: $f1 $f2"
     fi
     if [[ -d $oq_je_zsh_settings ]]
         then
-            source $oq_je_zsh_settings/jq_oqo_settings_scripts.zsh
             source $oq_je_zsh_settings/jq_50_settings_environment.zsh
             source $oq_je_zsh_settings/jq_nqn_settings_aliases.zsh
             source $oq_je_zsh_settings/jq_iqi_settings_contexts.zsh
