@@ -3,24 +3,10 @@
 ##############################
 # jq_variables
 ##############################
-##############################
-## nqn_pathways
-##############################
-# TODO Migrate to modern pathway
-local nen=$HOME/4q_flow-qiuy/50_Environment/nqn_pathways
-local oq=zsh
-local jq=configuring
-local je=tq_aliases.zsh
-local nqn_tq_pathways_aliases=$nen/oq_$oq/jq_$jq/$je
-
-##############################
-## nq_package-managers
-##############################
-local Q5q60nq_oq_packagemanager_zsh=zplug
-
-##############################
-# iqi_initiating
-##############################
+local nen=$HOME/4q50nqn_pathways
+    local oq=zsh
+    local je=tq_aliases.zsh
+    local nqn_tq_pathways_aliases=$nen/oq_$oq/$je
 ##############################
 ## nqn_pathways
 ##############################
@@ -31,8 +17,13 @@ if [[ -f $nqn_tq_pathways_aliases ]]
         # TODO Introduce colour
         echo "WARNING: Pathways alias missing"
         echo "nqn_tq_pathways_aliases value: " $nqn_tq_pathways_aliases
+        echo "nen value: " $nen
 fi
 
+
+##############################
+# iqi_initiating
+##############################
 # Command completion
 autoload -Uz compinit
 compinit
@@ -40,6 +31,10 @@ compinit
 ##############################
 ## nq_package-managers
 ##############################
+##############################
+## nq_package-managers
+##############################
+local Q5q60nq_oq_packagemanager_zsh=zplug
 
 if [[ -f $oq_iei_zsh_initiating ]]; then
     source $oq_iei_zsh_initiating
@@ -61,14 +56,15 @@ function iqi_jq_oq_initiating_settings_zsh {
 
     if [[ -d $nen ]] then
         local oq=zsh
-        local toby=$nen/oq_$oq
-        if [[ -d $toby ]] then
+        local n1n=oq_$oq
+        local q_nen=$nen/$n1n
+        if [[ -d $nen/$n1n ]] then
             local f1=jqoqo_plugins.zsh
             local f2=jq_oqo_settings_scripts.zsh
             local f3=jq_50_settings_environment.zsh
-            source $toby/$f1
-            source $toby/$f2
-            source $toby/$f3
+            source $q_nen/$f1
+            source $q_nen/$f2
+            source $q_nen/$f3
         else
             print "Missing software pathway: $nen"
             print "TODO Need to search for: $f1 $f2 $f3"
@@ -77,9 +73,12 @@ function iqi_jq_oq_initiating_settings_zsh {
         print "Missing root pathway: $nen"
         print "TODO Need to search for: $f1 $f2 $f3"
     fi
-    if [[ -d $oq_je_zsh_settings ]]
-        then
-            source $oq_je_zsh_settings/jq_nqn_settings_aliases.zsh
+    local n2n=oq_$oq
+    nen=$HOME/4q50jq_aliases
+        fe=jq_nqn_settings_aliases.zsh
+
+    if [[ -d $oq_je_zsh_settings ]] then
+            source $nen/$n2n/$fe
             source $oq_je_zsh_settings/jq_iqi_settings_contexts.zsh
             source $oq_je_zsh_settings/jq_iqi_settings_bindings.zsh
             # suggestion
