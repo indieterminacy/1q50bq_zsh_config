@@ -65,19 +65,20 @@ function iqi_jq_oq_initiating_settings_zsh {
         if [[ -d $toby ]] then
             local f1=jqoqo_plugins.zsh
             local f2=jq_oqo_settings_scripts.zsh
+            local f3=jq_50_settings_environment.zsh
             source $toby/$f1
             source $toby/$f2
+            source $toby/$f3
         else
             print "Missing software pathway: $nen"
-            print "TODO Need to search for: $f1 $f2"
+            print "TODO Need to search for: $f1 $f2 $f3"
         fi
     else
         print "Missing root pathway: $nen"
-        print "TODO Need to search for: $f1 $f2"
+        print "TODO Need to search for: $f1 $f2 $f3"
     fi
     if [[ -d $oq_je_zsh_settings ]]
         then
-            source $oq_je_zsh_settings/jq_50_settings_environment.zsh
             source $oq_je_zsh_settings/jq_nqn_settings_aliases.zsh
             source $oq_je_zsh_settings/jq_iqi_settings_contexts.zsh
             source $oq_je_zsh_settings/jq_iqi_settings_bindings.zsh
