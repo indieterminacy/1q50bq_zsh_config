@@ -20,7 +20,6 @@ if [[ -f $nqn_tq_pathways_aliases ]]
         echo "nen value: " $nen
 fi
 
-
 ##############################
 # iqi_initiating
 ##############################
@@ -31,10 +30,9 @@ compinit
 ##############################
 ## nq_package-managers
 ##############################
-##############################
-## nq_package-managers
-##############################
 local Q5q60nq_oq_packagemanager_zsh=zplug
+
+##############################
 
 if [[ -f $oq_iei_zsh_initiating ]]; then
     source $oq_iei_zsh_initiating
@@ -76,31 +74,37 @@ function iqi_jq_oq_initiating_settings_zsh {
     local n2n=oq_$oq
     nen=$HOME/4q50jq_aliases
         fe=jq_nqn_settings_aliases.zsh
+        source $nen/$n2n/$fe
 
-    if [[ -d $oq_je_zsh_settings ]] then
-            source $nen/$n2n/$fe
-            source $oq_je_zsh_settings/jq_iqi_settings_contexts.zsh
-            source $oq_je_zsh_settings/jq_iqi_settings_bindings.zsh
-            # suggestion
-            # https://stackoverflow.com/questions/2890651/zsh-for-loop-exclusion
-            # set -o EXTENDED_GLOB
-            # for package in $oq_je_zsh_settings/^os; do
-            #     source ${package}
-            # done
-        else
-            echo "ERROR: Directory missing for ZSH settings"
-            echo "oq_je_zsh_settings pathway value: $oq_je_zsh_settings"
-            echo ""
-            echo "TIP: Consider investigating whether correct alias given in ZSH pathways configuration file"
-            # TODO Build into function for loading variables file
-            if [[ -f $nqn_tq_pathways_aliases ]]; then
-                echo "INFO: Relevant configuration file exists"
-                echo "nqn_tq_pathways_aliases pathway value: $nqn_tq_pathways_aliases"
-            else
-                echo "WARNING: Relevant configuration file does not exist"
-                echo "nqn_tq_pathways_aliases pathway value: $nqn_tq_pathways_aliases"
-            fi
-    fi
+    nen=$HOME/5q50iqi_contexts
+        fe=jq_iqi_settings_contexts.zsh
+        source $nen/$n2n/$fe
+
+    nen=$HOME/4q50dqd_bindings
+        fe=jq_iqi_settings_bindings.zsh
+        source $nen/$n2n/$fe
+
+    # if [[ -d $oq_je_zsh_settings ]] then
+    #         # suggestion
+    #         # https://stackoverflow.com/questions/2890651/zsh-for-loop-exclusion
+    #         # set -o EXTENDED_GLOB
+    #         # for package in $oq_je_zsh_settings/^os; do
+    #         #     source ${package}
+    #         # done
+    #     else
+    #         echo "ERROR: Directory missing for ZSH settings"
+    #         echo "oq_je_zsh_settings pathway value: $oq_je_zsh_settings"
+    #         echo ""
+    #         echo "TIP: Consider investigating whether correct alias given in ZSH pathways configuration file"
+    #         # TODO Build into function for loading variables file
+    #         if [[ -f $nqn_tq_pathways_aliases ]]; then
+    #             echo "INFO: Relevant configuration file exists"
+    #             echo "nqn_tq_pathways_aliases pathway value: $nqn_tq_pathways_aliases"
+    #         else
+    #             echo "WARNING: Relevant configuration file does not exist"
+    #             echo "nqn_tq_pathways_aliases pathway value: $nqn_tq_pathways_aliases"
+    #         fi
+    # fi
 }
 iqi_jq_oq_initiating_settings_zsh
 
@@ -120,7 +124,6 @@ fi
 ## dqd_interfacing
 ##############################
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 
 ##############################
 # TODO Clarify whether this is for context only
